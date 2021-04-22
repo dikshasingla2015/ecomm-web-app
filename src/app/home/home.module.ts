@@ -7,13 +7,16 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { SearchProductComponent } from './components/search-product/search-product.component';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 
+const components = [
+  HomePageComponent,
+  MainPageComponent,
+  SearchProductComponent,
+  ViewProductDetailsComponent
+];
 
 @NgModule({
   declarations: [
-    HomePageComponent,
-    MainPageComponent,
-    SearchProductComponent,
-    ViewProductDetailsComponent
+    components
   ],
   imports: [
     CommonModule,
