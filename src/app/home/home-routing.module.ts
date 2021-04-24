@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
+import { ProductDataResolver } from './resolver/product-data.resolver';
+import { ProductListResolver } from './resolver/product-list.resolver';
 
 const routes: Routes = [
   {
@@ -10,10 +12,14 @@ const routes: Routes = [
     component: MainPageComponent,
     children: [
       {
-        path: '', component: HomePageComponent
+        path: '', component: HomePageComponent, resolve: {
+          productList: ProductListResolver
+        }
       },
       {
-        path: 'viewproduct/:productId', component: ViewProductDetailsComponent
+        path: 'viewproduct/:productId', component: ViewProductDetailsComponent, resolve: {
+          productData: ProductDataResolver
+        }
       }
     ],
   },

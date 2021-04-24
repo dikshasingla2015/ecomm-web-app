@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
+
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -20,7 +23,9 @@ const components = [
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    CardModule,
+    ButtonModule
   ]
 })
 export class HomeModule { }
