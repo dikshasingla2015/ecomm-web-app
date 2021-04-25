@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { logindetails } from '../models/logindetails.model';
 
 const USERNAME_KEY = 'AuthUserName';
 const USERID_KEY = 'AuthUserId';
@@ -30,6 +32,11 @@ export class AuthService {
   public saveUserId(username: string) {
     localStorage.removeItem(USERID_KEY);
     localStorage.setItem(USERID_KEY, username);
+  }
+
+  public login(user: logindetails): Observable<string> {
+    this.saveUsername(user.username);
+    return of("User Logged in Successfully.");
   }
 
   public isAuthenticated(): boolean {

@@ -1,1 +1,15 @@
-<p>view-product-details works!</p>
+<div style="margin:20px;padding: 5px;">
+    <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="assets/images/welcome.jpg">
+        </ng-template>
+        <p>{{product.name}}</p>
+        <p>{{product.brand}}</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Add To Cart" icon="pi pi-shopping-cart" styleClass="p-button-secondary"
+                (click)="addProductToCart(product.id)" [style]="{'margin-left': '.5em'}">
+            </p-button>
+        </ng-template>
+    </p-card>
+</div>

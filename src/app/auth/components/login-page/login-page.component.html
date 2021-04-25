@@ -1,1 +1,48 @@
-<p>login-page works!</p>
+<div class="container">
+    <div class="card bg-light mb-3">
+        <div class="card-header text-center">LOG-IN</div>
+        <div class="card-body">
+            <div class="alert alert-danger" *ngIf="message">
+                {{ message }}</div>
+            <form class="needs-validation" nonvalidate [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit()">
+                <div class="form-group">
+                    <label for="user-name">Enter User Name</label>
+                    <input type="email" class="form-control" id="user-name" formControlName="username"
+                        [ngClass]="getControlValidationClasses(userNameControl)">
+                    <div class="invalid-feedback" *ngIf="userNameControl.touched && userNameControl.errors?.required">
+                        Please enter user name
+                    </div>
+                    <div class="invalid-feedback" *ngIf="userNameControl.touched && userNameControl.errors?.email">
+                        username must be of email type
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password-control">Enter Password</label>
+                    <input type="password" class="form-control" id="password-control" formControlName="password"
+                        [ngClass]="getControlValidationClasses(passwordControl)">
+                    <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.required">
+                        Please enter password
+                    </div>
+                    <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.minlength">
+                        must be of length 5
+                    </div>
+                    <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.maxlength">
+                        must be of length 8
+                    </div>
+                </div>
+                <div style="text-align: center; padding: 3px;">
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+                </div>
+            </form>
+            <div style="text-align: center;padding: 3px;">
+                <p>
+                    Don't have a username and password?
+                </p>
+            </div>
+
+            <div style="text-align: center;padding: 3px;">
+                <button type="button" class="btn btn-success" routerLink="/auth/register">Register Now</button>
+            </div>
+            <br>
+        </div>
+    </div>
