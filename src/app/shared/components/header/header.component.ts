@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
 
@@ -15,12 +16,12 @@ export class HeaderComponent implements OnInit {
   cart: number = 0;
 
   constructor(private auth: AuthService, private router: Router,
-    private readonly cartService: CartService) {
-    // translate.addLangs(['en', 'fr', 'gr']);
-    // translate.setDefaultLang('en');
+    private readonly cartService: CartService, public readonly translate: TranslateService) {
+    translate.addLangs(['en', 'gr']);
+    translate.setDefaultLang('en');
 
-    // const browserLang = translate.getBrowserLang();
-    // translate.use(browserLang.match(/en|fr|gr/) ? browserLang : 'en');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|gr/) ? browserLang : 'en');
 
     this.auth.isLoggedIn().subscribe(next => {
       this.loggedIn = next;
