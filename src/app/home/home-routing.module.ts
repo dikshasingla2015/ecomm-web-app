@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('../place-order/place-order.module').then(m => m.PlaceOrderModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

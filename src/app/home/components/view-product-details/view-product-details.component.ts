@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-view-product-details',
@@ -10,18 +11,26 @@ export class ViewProductDetailsComponent implements OnInit {
 
   product: any;
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router) { }
+  addToCartClick: boolean = false;
+
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router,
+    private readonly cartService: CartService) {
+    this.addToCartClick = false;
+  }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      console.log("details", data);
       this.product = data.productData;
     })
   }
 
-  addProductToCart(productId: string) {
-    console.log(productId);
-    this.router.navigateByUrl("/placeorder/cart");
+  addToCart() {
+    let cartData = { "product": this.product, "quantity": 1 };
+    this.cartService.addProduct(cartData);
+    this.addToCartClick = true;
   }
 
+  ViewCart() {
+    this.router.navigateByUrl("/placeorder/cart");
+  }
 }

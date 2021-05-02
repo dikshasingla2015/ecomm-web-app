@@ -6,9 +6,12 @@
         <p>{{product.name}}</p>
         <p>{{product.brand}}</p>
         <ng-template pTemplate="footer">
-            <p-button label="Save" icon="pi pi-check"></p-button>
-            <p-button label="Add To Cart" icon="pi pi-shopping-cart" styleClass="p-button-secondary"
-                (click)="addProductToCart(product.id)" [style]="{'margin-left': '.5em'}">
+            <p-button label="Cancel" icon="pi pi-times"></p-button>
+            <p-button label="Add To Cart" *ngIf="!(addToCartClick)" icon="pi pi-shopping-cart"
+                styleClass="p-button-secondary" (click)="addToCart()" [style]="{'margin-left': '.5em'}">
+            </p-button>
+            <p-button label="View Cart" *ngIf="addToCartClick" icon="pi pi-shopping-cart"
+                styleClass="p-button-secondary" (click)="ViewCart()" [style]="{'margin-left': '.5em'}">
             </p-button>
         </ng-template>
     </p-card>

@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { logindetails } from '../models/logindetails.model';
 
 const USERNAME_KEY = 'AuthUserName';
-const USERID_KEY = 'AuthUserId';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  isLoginSubject = new BehaviorSubject<boolean>(this.isAuthenticated());
+
   constructor() { }
 
   public signOut() {
+    localStorage.removeItem(USERNAME_KEY);
     localStorage.clear();
+    this.isLoginSubject.next(false);
   }
 
   public saveUsername(username: string) {
@@ -25,17 +28,13 @@ export class AuthService {
     return localStorage.getItem(USERNAME_KEY);
   }
 
-  public getUserId(): any {
-    return localStorage.getItem(USERID_KEY);
-  }
-
-  public saveUserId(username: string) {
-    localStorage.removeItem(USERID_KEY);
-    localStorage.setItem(USERID_KEY, username);
+  public isLoggedIn(): Observable<boolean> {
+    return this.isLoginSubject.asObservable();
   }
 
   public login(user: logindetails): Observable<string> {
     this.saveUsername(user.username);
+    this.isLoginSubject.next(true);
     return of("User Logged in Successfully.");
   }
 
