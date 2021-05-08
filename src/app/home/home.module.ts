@@ -7,25 +7,27 @@ import {ButtonModule} from 'primeng/button';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { SearchProductComponent } from './components/search-product/search-product.component';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import {DataViewModule} from 'primeng/dataview';
 
 const components = [
   HomePageComponent,
   MainPageComponent,
-  SearchProductComponent,
   ViewProductDetailsComponent
 ];
 
 @NgModule({
   declarations: [
-    components
+    components,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    DataViewModule
   ]
 })
 export class HomeModule { }

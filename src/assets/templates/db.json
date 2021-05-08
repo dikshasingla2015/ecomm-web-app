@@ -1,30 +1,102 @@
 [
     {
         "id": "1",
-        "name": "M31 Dual Sim Phone",
-        "brand": "Samsung",
-        "color": "Navy Blue",
-        "price": 15000,
-        "description": "",
-        "imageURL": "",
-        "features": "",
+        "name": "OnePlus Nord 5G",
+        "brand": "OnePlus",
+        "color": "Gray Onyx",
+        "price": 30000,
+        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "imageURL": "assets/images/oneplus.jpg",
+        "features": [
+            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
+        "category": "Mobile",
+        "quantity": 5
+    },
+    {
+        "id": "1",
+        "name": "OnePlus Nord 5G",
+        "brand": "OnePlus",
+        "color": "Gray Onyx",
+        "price": 30000,
+        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "imageURL": "assets/images/oneplus.jpg",
+        "features": [
+            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
+        "category": "Mobile",
+        "quantity": 5
+    },
+    {
+        "id": "1",
+        "name": "OnePlus Nord 5G",
+        "brand": "OnePlus",
+        "color": "Gray Onyx",
+        "price": 30000,
+        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "imageURL": "assets/images/oneplus.jpg",
+        "features": [
+            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
+            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
+            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+        ],
         "category": "Mobile",
         "quantity": 5
     },
     {
         "id": "2",
-        "name": "T-Shirt",
-        "brand": "Duke",
-        "color": "Black",
-        "price": 800,
-        "description": "",
-        "imageURL": "",
-        "features": "",
-        "category": "Clothes",
+        "name": "Redmi 9",
+        "brand": "Redmi",
+        "color": "Sky Blue",
+        "price": 8499,
+        "description": "(Sky Blue, 4GB RAM, 64GB Storage)",
+        "imageURL": "assets/images/redmi9.jpeg",
+        "features": [
+            "13+2MP Rear camera with AI Portrait, AI scene recognition, HDR, Pro mode | 5MP front facing camera",
+            "16.58 centimeters (6.53-inch) HD+ multi-touch capacitive touchscreen with 1600 x 720 pixels resolution, 268 ppi pixel density, 20:9 aspect ratio",
+            "Memory, Storage & SIM: 4GB RAM | 64GB storage expandable up to 512GB| Dual SIM with dual standby (4G+4G)"
+        ],
+        "category": "Mobile",
         "quantity": 5
     },
     {
         "id": "3",
+        "name": "Samsung Galaxy M31",
+        "brand": "Samsung",
+        "color": "Ocean Blue",
+        "price": 13999,
+        "description": "(Ocean Blue, 6GB RAM, 128GB Storage)",
+        "imageURL": "assets/images/Samsung.jpg",
+        "features": [
+            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
+            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
+            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
+        ],
+        "category": "Mobile",
+        "quantity": 5
+    },
+    {
+        "id": "3",
+        "name": "Samsung Galaxy M31",
+        "brand": "Samsung",
+        "color": "Ocean Blue",
+        "price": 13999,
+        "description": "(Ocean Blue, 6GB RAM, 128GB Storage)",
+        "imageURL": "assets/images/Samsung.jpg",
+        "features": [
+            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
+            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
+            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
+        ],
+        "category": "Mobile",
+        "quantity": 5
+    },
+    {
+        "id": "4",
         "name": "Sports Shoes",
         "brand": "Reebok",
         "color": "White",
@@ -33,18 +105,6 @@
         "imageURL": "",
         "features": "",
         "category": "Footwear",
-        "quantity": 5
-    },
-    {
-        "id": "4",
-        "name": "Moto G6 Plus Phone",
-        "brand": "Motorola",
-        "color": "Black",
-        "price": 20000,
-        "description": "",
-        "imageURL": "",
-        "features": "",
-        "category": "Mobile",
         "quantity": 5
     },
     {

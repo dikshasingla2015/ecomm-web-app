@@ -14,21 +14,18 @@
         <a class="nav-link" [routerLink]="['/placeorder/cart']">Cart({{cart}}) <span
             class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link " role="button">{{ 'HEADER.SELECT' | translate }}: </a>
-      </li>
       <li class="nav-item dropdown">
-        <select #langSelect (change)="translate.use(langSelect.value)" class="nav-link dropdown-toggle" role="button"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <option class="dropdown-item" *ngFor="let lang of translate.getLangs()" [value]="lang"
-            [selected]="lang === translate.currentLang">{{ lang }}</option>
-        </select>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Change Language
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <button class="dropdown-item" (click)="changeLanguageOnSelect('en')">English</button>
+          <button class="dropdown-item" (click)="changeLanguageOnSelect('gr')">German</button>
+        </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <app-search-product (searchText)="searchProductByName($event)"></app-search-product>
     <div>
       <button class="btn my-2 my-sm-0" type="submit" *ngIf="!(loggedIn)" (click)="signIn()">
         {{ 'HEADER.LOGIN' | translate }}</button>

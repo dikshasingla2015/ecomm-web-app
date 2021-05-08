@@ -4,10 +4,13 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchProductComponent } from './components/search-product/search-product.component';
 
 const components = [
   HeaderComponent,
-  FooterComponent
+  FooterComponent,
+  SearchProductComponent
 ]
 
 @NgModule({
@@ -17,7 +20,8 @@ const components = [
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ],
   exports: [
     components

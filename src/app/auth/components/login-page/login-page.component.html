@@ -1,10 +1,13 @@
 <div class="container">
-    <div class="card bg-light mb-3">
-        <div class="card-header text-center">LOG-IN</div>
+    <div class="card" [style]="{'width': '28rem', 'margin-bottom': '2em'}">
+        <div class="card-header text-center">LOGIN</div>
+        <div>
+            <img src="assets/images/welcome2.jpg" width="100%">
+        </div>
         <div class="card-body">
             <div class="alert alert-danger" *ngIf="message">
                 {{ message }}</div>
-            <form class="needs-validation" nonvalidate [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit()">
+            <form class="needs-validation" nonvalidate [formGroup]="loginForm">
                 <div class="form-group">
                     <label for="user-name">Enter User Name</label>
                     <input type="email" class="form-control" id="user-name" formControlName="username"
@@ -31,8 +34,10 @@
                     </div>
                 </div>
                 <div style="text-align: center; padding: 3px;">
-                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Submit</button>
+                    <button pButton pRipple type="button" label="Submit" class="p-button-rounded p-button-success"
+                        [disabled]="!loginForm.valid" (click)="onLoginFormSubmit()"></button>
                 </div>
             </form>
         </div>
     </div>
+</div>

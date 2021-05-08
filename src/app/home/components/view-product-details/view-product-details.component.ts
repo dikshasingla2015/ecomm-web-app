@@ -18,19 +18,23 @@ export class ViewProductDetailsComponent implements OnInit {
     this.addToCartClick = false;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.data.subscribe(data => {
       this.product = data.productData;
     })
   }
 
-  addToCart() {
+  addToCart(): void {
     let cartData = { "product": this.product, "quantity": 1 };
     this.cartService.addProduct(cartData);
     this.addToCartClick = true;
   }
 
-  ViewCart() {
+  ViewCart(): void {
     this.router.navigateByUrl("/placeorder/cart");
+  }
+
+  onCancelClick(): void {
+    this.router.navigateByUrl("/");
   }
 }

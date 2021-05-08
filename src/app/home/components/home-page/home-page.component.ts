@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ProductModel } from 'src/app/core/models/product.model';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,15 +12,22 @@ export class HomePageComponent implements OnInit {
 
   products: ProductModel[] = [];
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router) { }
+  constructor(private readonly route: ActivatedRoute,
+    private readonly productService: ProductService) { }
 
   ngOnInit(): void {
+
+    this.getProductsData();
+
     this.route.data.subscribe(data => {
       this.products = data.productList;
-    })
+    });
+
   }
 
-  viewProductDescription(productId: string) {
-    this.router.navigateByUrl("/home/viewproduct/" + productId);
+  getProductsData(): void {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+    });
   }
 }

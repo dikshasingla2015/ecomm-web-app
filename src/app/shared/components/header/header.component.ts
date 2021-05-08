@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-header',
@@ -11,12 +12,15 @@ import { CartService } from 'src/app/core/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
 
+  language: string = '';
+
   loggedIn: any;
 
   cart: number = 0;
 
   constructor(private auth: AuthService, private router: Router,
-    private readonly cartService: CartService, public readonly translate: TranslateService) {
+    private readonly cartService: CartService, public readonly translate: TranslateService,
+    private readonly productService: ProductService) {
     translate.addLangs(['en', 'gr']);
     translate.setDefaultLang('en');
 
@@ -33,13 +37,21 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  signIn() {
+  signIn(): void {
     this.router.navigate(['/auth/login']);
   }
 
-  signOut() {
+  signOut(): void {
     this.auth.signOut();
     this.router.navigate(['/home']);
+  }
+
+  changeLanguageOnSelect(language: string): void {
+    this.translate.use(language);
+  }
+
+  searchProductByName(searchText: string):void {
+    this.productService.getProductDataByName(searchText);
   }
 
 }
