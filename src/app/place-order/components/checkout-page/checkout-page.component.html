@@ -1,144 +1,186 @@
-<div class="container">
-    <div class="card mb-3">
-        <div class="card-header text-center">Delivery Details</div>
-        <div class="card-body">
-            <form class="needs-validation" nonvalidate [formGroup]="registrationForm" (ngSubmit)="onFormSubmit()">
-                <div class="form-row">
-                    <div class="form-group col-md-4 mb-3">
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" pInputText formControlName="firstName"
-                            [ngClass]="getControlValidationClasses(firstNameControl)">
-                        <div class="invalid-feedback"
-                            *ngIf="firstNameControl.touched && firstNameControl.errors?.required">
-                            Please Enter your first name
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="firstNameControl.touched && firstNameControl.errors?.minlength">
-                            must be of atleast length 3
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="firstNameControl.touched && firstNameControl.errors?.pattern">
-                            only alphabetical characters allowed
-                        </div>
+<div class="container" *ngIf="orderDetails.length > 0">
+    <div class="cart-page-header">
+        <h3>{{ 'CHECKOUT.ORDER_SUMMARY' | translate }}</h3>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <div class="card col-lg-5" style="justify-content: space-between;margin-right: 15px;">
+            <p-table [value]="orderDetails" [scrollable]="true" scrollHeight="360px">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>{{ 'CHECKOUT.PRODUCT_IMAGE' | translate }}</th>
+                        <th>{{ 'CHECKOUT.PRODUCT_NAME' | translate }}</th>
+                        <th>{{ 'CHECKOUT.PRODUCT_QUANTITY' | translate }}</th>
+                        <th>{{ 'CHECKOUT.TOTAL_PRICE' | translate }}</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-product>
+                    <tr>
+                        <td><img src="{{product.product.imageURL}}" [alt]="product.product.imageURL" width="80px"
+                                class="product-image" /></td>
+                        <td class="product-title td-text">{{product.product.name}}</td>
+                        <td class="td-text" style="text-align: center;">{{product.quantity}}</td>
+                        <td class="td-text" style="text-align: center;">{{product.product.price * product.quantity}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            <div>
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                        {{ 'CHECKOUT.SUBTOTAL' | translate }}
                     </div>
-                    <div class="form-group col-md-4 mb-3">
-                        <label for="middleName">Middle Name</label>
-                        <input type="text" class="form-control" id="firstname" pInputText formControlName="middleName"
-                            [ngClass]="getControlValidationClasses(middleNameControl)">
-                    </div>
-                    <div class="form-group col-md-4 mb-3">
-                        <label for="lastname">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" pInputText formControlName="lastName"
-                            [ngClass]="getControlValidationClasses(lastNameControl)">
-                        <div class="invalid-feedback"
-                            *ngIf="lastNameControl.touched && lastNameControl.errors?.required">
-                            Please Enter your last name
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="lastNameControl.touched && lastNameControl.errors?.minlength">
-                            must be of atleast length 4
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="lastNameControl.touched && lastNameControl.errors?.pattern">
-                            only alphabets allowed
-                        </div>
+                    <div class="col-md-6 cart-total-value">
+                        {{totalAmount | currency :'USD'}}
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" pInputText formControlName="email"
-                            [ngClass]="getControlValidationClasses(emailControl)">
-                        <div class="invalid-feedback" *ngIf="emailControl.touched && emailControl.errors?.required">
-                            Please Enter email-id
+                <div class="cart-total-row row">
+                    <div class="col-md-6 cart-total-label">
+                        {{ 'CHECKOUT.TOTAL' | translate }}
+                    </div>
+                    <div class="col-md-6 cart-total-value cart-total-price">
+                        {{totalAmount | currency :'USD'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-lg-6">
+            <div class="card-header text-center">{{ 'CHECKOUT.DELIVERY' | translate }}</div>
+            <div class="card-body">
+                <form class="needs-validation" nonvalidate [formGroup]="userDetailsForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="firstname">{{ 'CHECKOUT.FIRSTNAME' | translate }}</label>
+                            <input type="text" class="form-control" id="firstname" pInputText
+                                formControlName="firstName" [ngClass]="getControlValidationClasses(firstNameControl)">
+                            <div class="invalid-feedback"
+                                *ngIf="firstNameControl.touched && firstNameControl.errors?.required">
+                                {{ 'CHECKOUT.FIRSTNAME_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="firstNameControl.touched && firstNameControl.errors?.minlength">
+                                {{ 'CHECKOUT.FIRSTNAME_MINLENGTH' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="firstNameControl.touched && firstNameControl.errors?.pattern">
+                                {{ 'CHECKOUT.FIRSTNAME_PATTERN' | translate }}
+                            </div>
                         </div>
-                        <div class="invalid-feedback" *ngIf="emailControl.touched && emailControl.errors?.minlength">
-                            must be of atleast length 3
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="middleName">{{ 'CHECKOUT.MIDDLENAME' | translate }}</label>
+                            <input type="text" class="form-control" id="middleName" pInputText
+                                formControlName="middleName" [ngClass]="getControlValidationClasses(middleNameControl)">
                         </div>
-                        <div class="invalid-feedback" *ngIf="emailControl.touched && emailControl.errors?.email">
-                            email pattern required
+                        <div class="form-group col-md-4 mb-3">
+                            <label for="lastname">{{ 'CHECKOUT.LASTNAME' | translate }}</label>
+                            <input type="text" class="form-control" id="lastname" pInputText formControlName="lastName"
+                                [ngClass]="getControlValidationClasses(lastNameControl)">
+                            <div class="invalid-feedback"
+                                *ngIf="lastNameControl.touched && lastNameControl.errors?.required">
+                                {{ 'CHECKOUT.LASTNAME_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="lastNameControl.touched && lastNameControl.errors?.minlength">
+                                {{ 'CHECKOUT.LASTNAME_MINLENGTH' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="lastNameControl.touched && lastNameControl.errors?.pattern">
+                                {{ 'CHECKOUT.LASTNAME_PATTERN' | translate }}
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="telephone">Mobile Number</label>
-                        <input type="text" class="form-control" id="telephone" pInputText formControlName="telephone"
-                            [ngClass]="getControlValidationClasses(telephoneControl)">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">{{ 'CHECKOUT.EMAIL' | translate }}</label>
+                            <input type="email" class="form-control" id="email" pInputText formControlName="email"
+                                [ngClass]="getControlValidationClasses(emailControl)">
+                            <div class="invalid-feedback" *ngIf="emailControl.touched && emailControl.errors?.required">
+                                {{ 'CHECKOUT.EMAIL_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback" *ngIf="emailControl.touched && emailControl.errors?.email">
+                                {{ 'CHECKOUT.EMAIL_PATTERN' | translate }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mobileNo">{{ 'CHECKOUT.MOBILENO' | translate }}</label>
+                            <input type="text" class="form-control" id="mobileNo" pInputText formControlName="mobileNo"
+                                [ngClass]="getControlValidationClasses(mobileNoControl)">
+                            <div class="invalid-feedback"
+                                *ngIf="mobileNoControl.touched && mobileNoControl.errors?.required">
+                                {{ 'CHECKOUT.MOBILENO_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="mobileNoControl.touched && mobileNoControl.errors?.pattern">
+                                {{ 'CHECKOUT.MOBILENO_REQUIRED' | translate }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">{{ 'CHECKOUT.ADDRESS' | translate }}</label>
+                        <textarea class="form-control" id="address" rows="1" pInputTextarea formControlName="address"
+                            [ngClass]="getControlValidationClasses(addressControl)"></textarea>
+                        <div class="invalid-feedback" *ngIf="addressControl.touched && addressControl.errors?.required">
+                            {{ 'CHECKOUT.ADDRESS_REQUIRED' | translate }}
+                        </div>
                         <div class="invalid-feedback"
-                            *ngIf="telephoneControl.touched && telephoneControl.errors?.required">
-                            Please Enter your mobile number
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="telephoneControl.touched && telephoneControl.errors?.maxlength">
-                            upto 15 numeric characters are allowed
-                        </div>
-                        <div class="invalid-feedback"
-                            *ngIf="telephoneControl.touched && telephoneControl.errors?.pattern">
-                            not in correct mobile number format
+                            *ngIf="addressControl.touched && addressControl.errors?.minlength">
+                            {{ 'CHECKOUT.ADDRESS_MINLEN' | translate }}
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <textarea class="form-control" id="address" rows="1" pInputTextarea formControlName="address"
-                        [ngClass]="getControlValidationClasses(addressControl)"></textarea>
-                    <div class="invalid-feedback" *ngIf="addressControl.touched && addressControl.errors?.required">
-                        Please enter address here
-                    </div>
-                    <div class="invalid-feedback" *ngIf="addressControl.touched && addressControl.errors?.minlength">
-                        must be of atleast length 4
-                    </div>
-                    <div class="invalid-feedback" *ngIf="addressControl.touched && addressControl.errors?.minlength">
-                        must be of atleast length 4
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" pInputText formControlName="city"
-                            [ngClass]="getControlValidationClasses(cityControl)">
-                        <div class="invalid-feedback" *ngIf="cityControl.touched && cityControl.errors?.required">
-                            Please Enter your city
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="city">{{ 'CHECKOUT.CITY' | translate }}</label>
+                            <input type="text" class="form-control" id="city" pInputText formControlName="city"
+                                [ngClass]="getControlValidationClasses(cityControl)">
+                            <div class="invalid-feedback" *ngIf="cityControl.touched && cityControl.errors?.required">
+                                {{ 'CHECKOUT.CITY_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback" *ngIf="cityControl.touched && cityControl.errors?.pattern">
+                                {{ 'CHECKOUT.CITY_PATTERN' | translate }}
+                            </div>
                         </div>
-                        <div class="invalid-feedback" *ngIf="cityControl.touched && cityControl.errors?.pattern">
-                            only alphabets allowed
+                        <div class="form-group col-md-3 mb-3">
+                            <label for="state">{{ 'CHECKOUT.STATE' | translate }}</label>
+                            <select id="state" class="custom-select form-control" formControlName="state"
+                                [ngClass]="getControlValidationClasses(stateControl)">
+                                <option selected disabled value="">Choose...</option>
+                                <option>Haryana</option>
+                                <option>Delhi</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Maharastra</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Punjab</option>
+                            </select>
+                            <div class="invalid-feedback" *ngIf="stateControl.touched && stateControl.errors?.required">
+                                {{ 'CHECKOUT.STATE_REQUIRED' | translate }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group col-md-3 mb-3">
-                        <label for="state">State</label>
-                        <select id="state" class="custom-select form-control" formControlName="state"
-                            [ngClass]="getControlValidationClasses(stateControl)">
-                            <option selected disabled value="">Choose...</option>
-                            <option>Haryana</option>
-                            <option>Delhi</option>
-                            <option>Uttar Pradesh</option>
-                            <option>Maharastra</option>
-                            <option>Andhra Pradesh</option>
-                            <option>Himachal Pradesh</option>
-                            <option>Punjab</option>
-                        </select>
-                        <div class="invalid-feedback" *ngIf="stateControl.touched && stateControl.errors?.required">
-                            Please select state
-                        </div>
-                    </div>
-                    <div class="form-group col-md-3 mb-3">
-                        <label for="zipcode">Zip Code</label>
-                        <input type="text" class="form-control" id="zipcode" pInputText formControlName="zipCode"
-                            [ngClass]="getControlValidationClasses(zipCodeControl)">
-                        <div class="invalid-feedback" *ngIf="zipCodeControl.touched && zipCodeControl.errors?.required">
-                            Please Enter your zip code
-                        </div>
-                        <div class="invalid-feedback" *ngIf="zipCodeControl.touched && zipCodeControl.errors?.pattern">
-                            only digits allowed
+                        <div class="form-group col-md-3 mb-3">
+                            <label for="zipcode">{{ 'CHECKOUT.ZIPCODE' | translate }}</label>
+                            <input type="text" class="form-control" id="zipcode" pInputText formControlName="zipCode"
+                                [ngClass]="getControlValidationClasses(zipCodeControl)">
+                            <div class="invalid-feedback"
+                                *ngIf="zipCodeControl.touched && zipCodeControl.errors?.required">
+                                {{ 'CHECKOUT.ZIPCODE_REQUIRED' | translate }}
+                            </div>
+                            <div class="invalid-feedback"
+                                *ngIf="zipCodeControl.touched && zipCodeControl.errors?.pattern">
+                                {{ 'CHECKOUT.ZIPCODE_PATTERN' | translate }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div style="text-align: center;padding: 3px;">
-                    <button type="cancel" class="btn btn-primary" (click)="onCancelClicked()">Cancel</button>&nbsp;
-                    <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid"
-                        (click)="onPlaceOrderClicked()">Place Order</button>
-                </div>
-            </form>
+                    <br>
+                    <div style="text-align: center;padding: 3px;">
+                        <button pButton pRipple type="button" class="p-button-rounded p-button-warning"
+                            (click)="onCancelClicked()">
+                            {{ 'CHECKOUT.CANCEL' | translate }}</button>
+                        <button pButton pRipple type="button" class="p-button-rounded p-button-success"
+                            [disabled]="!userDetailsForm.valid" (click)="onPlaceOrderClicked()"
+                            style="margin-left: 10px;">
+                            {{ 'CHECKOUT.PLACEORDER' | translate }}</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

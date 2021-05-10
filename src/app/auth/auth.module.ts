@@ -6,6 +6,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 const components = [
   LoginPageComponent
 ];
@@ -17,6 +19,7 @@ const components = [
   imports: [
     CommonModule,
     AuthRoutingModule,
+    TranslateModule,
     ReactiveFormsModule,
     ButtonModule
   ]

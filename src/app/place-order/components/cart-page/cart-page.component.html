@@ -1,20 +1,27 @@
 <div class="cart-page-container">
-    <div class="cart-page-header">
-        <h1>SHOPPING CART</h1>
-    </div>
     <div class="cart-page-content" *ngIf="cartData.length > 0">
         <div class="cart-item-header cart-item-row">
-            <div class="cart-item-cell cart-item-product"><span>Product</span></div>
-            <div class="cart-item-cell cart-item-quantity"><span>Quantity</span></div>
-            <div class="cart-item-cell cart-item-total"><span>Total</span></div>
-            <div class="cart-item-cell cart-item-action"><span>Action</span></div>
+            <div class="cart-item-cell cart-item-product">
+                <span>{{ 'CART.PRODUCT' | translate }}</span>
+            </div>
+            <div class="cart-item-cell cart-item-quantity" style="text-align: left;">
+                <span>{{ 'CART.QUANTITY' | translate }}</span>
+            </div>
+            <div class="cart-item-cell cart-item-total">
+                <span>{{ 'CART.TOTAL' | translate }}</span>
+            </div>
+            <div class="cart-item-cell cart-item-action">
+                <span>{{ 'CART.ACTION' | translate }}</span>
+            </div>
         </div>
         <div class="cart-item-row" *ngFor="let cart of cartData;let i = index">
             <div class="cart-item-cell cart-item-product">
-                <div class="cart-item-thumbnail" [ngStyle]="{'background-image': ''}">
+                <div class="cart-item-thumbnail">
+                    <img src="{{cart.product.imageURL}}" [alt]="cart.product.imageURL" width="80px"
+                        class="product-image" />
                 </div>
                 <div class="cart-item-info">
-                    <div class="cart-item-brand">{{cart.product.brand}}</div>
+                    <div class="cart-item-brand">{{cart.product.color}}</div>
                     <div class="cart-item-title">{{cart.product.name}}</div>
                 </div>
             </div>
@@ -23,8 +30,12 @@
                     <input class="input-style" readonly type="number" value={{cart.quantity}}>
                 </div>
                 <div class="actions">
-                    <div (click)="increaseQuantity(i)" class="noselect">+</div>
-                    <div (click)="decreaseQuantity(i)" class="noselect">-</div>
+                    <div (click)="increaseQuantity(i)" class="noselect">
+                        <i class="pi pi-plus" style="margin-top: .4rem;"></i>
+                    </div>
+                    <div (click)="decreaseQuantity(i)" class="noselect">
+                        <i class="pi pi-minus" style="margin-top: .4rem;"></i>
+                    </div>
                 </div>
             </div>
             <div class="cart-item-cell cart-item-total">
@@ -33,43 +44,22 @@
                 </div>
             </div>
             <div class="cart-item-cell cart-item-action">
-                <div class="item-remove" (click)="removeFromCart(i)">X</div>
-            </div>
-        </div>
-        <div class="row cart-total">
-            <div class="col-lg-offset-6">
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Cart overview
-                    </div>
-                    <div class="col-md-6 cart-total-value"></div>
-                </div>
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Subtotal
-                    </div>
-                    <div class="col-md-6 cart-total-value">
-                        {{totalPrice | currency :'USD'}}
-                    </div>
-                </div>
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Total
-                    </div>
-                    <div class="col-md-6 cart-total-value cart-total-price">
-                        {{totalPrice | currency :'USD'}}
-                    </div>
+                <div class="item-remove" (click)="removeFromCart(i)">
+                    <i class="pi pi-trash" style="color: red; font-size: .76em;"></i>
                 </div>
             </div>
         </div>
         <div class="cart-buttons">
-            <div class="continue-shopping"><a routerLink="/">Continue shopping</a></div>
-            <div class="checkout-button button button-primary button-large">Checkout ({{totalPrice | currency :'USD'}})
-            </div>
+            <button pButton pRipple type="button" class="p-button-rounded p-button-help" routerLink="/">
+                {{ 'CART.CONTINUE_SHOPPING' | translate }}</button>
+            <button pButton pRipple type="button" class="p-button-rounded p-button-success" style="margin-left: 10px;"
+                (click)="checkout()">
+                {{ 'CART.CHECKOUT' | translate }} ({{totalPrice | currency :'USD'}})</button>
         </div>
     </div>
     <div class="cart-page-content" *ngIf="cartData.length == 0">
-        <h4>Your cart is empty.</h4>
-        <a routerLink="/">Go Shopping</a>
+        <h2>{{ 'CART.CART_EMPTY' | translate }}</h2>
+        <button pButton pRipple type="button" class="p-button-rounded p-button-secondary" routerLink="/">
+            {{ 'CART.GO_SHOPPING' | translate }}</button>
     </div>
 </div>

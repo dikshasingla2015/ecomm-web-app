@@ -1,39 +1,55 @@
 {
   "HEADER": {
     "TITLE": "Ecommerce App NAGP",
-    "SELECT": "Selected language",
+    "SELECT": "Change language",
+    "SELECT_ENGLISH": "English",
+    "SELECT_GERMAN": "German",
+    "HOME": "Home",
+    "CART": "Cart",
     "LOGIN": "Login",
-    "LOGOUT": "Logout"
+    "LOGOUT": "Logout",
+    "SEARCH": "Search"
   },
   "LOGIN": {
-    "USERNAME": "Enter User Name",
-    "PASSWORD": "Enter Password",
+    "USERNAME": "User Name",
+    "PASSWORD": "Password",
     "USERNAME_REQUIRED": "Please enter user name",
     "USERNAME_EMAIL": "username must be of email type",
     "PASSWORD_REQUIRED": "Please enter password",
-    "MIN_PASSWORD_LENGTH": "must be of length 5",
-    "MAX_PASSWORD_LENGTH": "must be of length 8",
-    "LOGIN_TEXT": "LOG IN"
+    "MIN_PASSWORD_LENGTH": "Password should be atleast 5 character long.",
+    "MAX_PASSWORD_LENGTH": "Password should not be more than 8 characters.",
+    "LOGIN_TEXT": "LOGIN",
+    "SIGNIN": "Sign In"
+  },
+  "HOME": {
+    "CANCEL": "Cancel",
+    "ADD_TO_CART": "Add To Cart",
+    "VIEW_CART": "View Cart",
+    "FEATURES": "Features"
   },
   "CART": {
-    "SHOPPINGCART": "Shopping Cart",
     "PRODUCT": "Product",
     "QUANTITY": "Quantity",
     "TOTAL": "Total",
     "ACTION": "Action",
-    "CART_OVERVIEW": "Cart overview",
-    "SUBTOTAL": "Subtotal",
     "CONTINUE_SHOPPING": "Continue shopping",
     "CHECKOUT": "Checkout",
     "CART_EMPTY": "Your cart is empty.",
     "GO_SHOPPING": "Go Shopping"
   },
   "CHECKOUT": {
+    "ORDER_SUMMARY": "Order Summary",
+    "PRODUCT_IMAGE": "Product Image",
+    "PRODUCT_NAME": "Product Name",
+    "PRODUCT_QUANTITY": "Product Quantity",
+    "TOTAL_PRICE": "Total Price",
+    "SUBTOTAL": "Subtotal",
+    "TOTAL": "Total",
     "DELIVERY": "Delivery Details",
     "FIRSTNAME": "First Name",
     "FIRSTNAME_REQUIRED": "Please Enter your first name",
     "FIRSTNAME_MINLENGTH": "must be of atleast length 3",
-    "FIRSTNAME_PATTERN": "only alphabetical characters allowed",
+    "FIRSTNAME_PATTERN": "only alphabets allowed",
     "MIDDLENAME": "Middle Name",
     "LASTNAME": "Last Name",
     "LASTNAME_REQUIRED": "Please Enter your last name",
@@ -41,15 +57,13 @@
     "LASTNAME_PATTERN": "only alphabets allowed",
     "EMAIL": "Email",
     "EMAIL_REQUIRED": "Please Enter email-id",
-    "EMAIL_PATTERN": "email pattern required",
+    "EMAIL_PATTERN": "Please enter correct email.",
     "MOBILENO": "Mobile Number",
     "MOBILENO_REQUIRED": "Please Enter your mobile number",
-    "MOBILENO_MAXLENGTH": "upto 15 numeric characters are allowed",
-    "MOBILENO_PATTERN": "not in correct mobile number format",
+    "MOBILENO_PATTERN": "Please enter in correct format.",
     "ADDRESS": "Address",
     "ADDRESS_REQUIRED": "Please enter address here",
     "ADDRESS_MINLEN": "must be of atleast length 4",
-    "ADDRESS_MAXLEN": "must be of atleast length 4",
     "CITY": "City",
     "CITY_REQUIRED": "Please Enter your city",
     "CITY_PATTERN": "only alphabets allowed",
@@ -58,7 +72,7 @@
     "ZIPCODE": "Zip Code",
     "ZIPCODE_REQUIRED": "Please Enter your zip code",
     "ZIPCODE_PATTERN": "only digits allowed",
-    "CANCEL": "Cancel",
+    "CANCEL": "Cancel Order",
     "PLACEORDER": "Place Order"
   }
 }

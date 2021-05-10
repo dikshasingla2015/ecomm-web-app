@@ -10,18 +10,21 @@
                 <span class="product-price">{{product.price}}</span>
             </div>
             <ul class="list-unstyled">
-                <li>Features:
+                <li>{{ 'HOME.FEATURES' | translate }}:
                     <ul *ngFor="let data of product.features" class="ul-data">
                         <li>{{data}}</li>
                     </ul>
                 </li>
             </ul>
             <div class="buttons-align">
-                <p-button label="Cancel" icon="pi pi-times" (click)="onCancelClick()"></p-button>
-                <p-button label="Add To Cart" *ngIf="!(addToCartClick)" icon="pi pi-shopping-cart"
-                    styleClass="p-button-success" (click)="addToCart()" [style]="{'margin-left': '.5em'}">
+                <p-button label="{{ 'HOME.CANCEL' | translate }}" icon="pi pi-times" styleClass="p-button-help"
+                    (click)="onCancelClick()">
                 </p-button>
-                <p-button label="View Cart" *ngIf="addToCartClick" icon="pi pi-shopping-cart"
+                <p-button label="{{ 'HOME.ADD_TO_CART' | translate }}" *ngIf="!(addToCartClick)"
+                    icon="pi pi-shopping-cart" styleClass="p-button-success" (click)="addToCart()"
+                    [style]="{'margin-left': '.5em'}">
+                </p-button>
+                <p-button label="{{ 'HOME.VIEW_CART' | translate }}" *ngIf="addToCartClick" icon="pi pi-shopping-cart"
                     styleClass="p-button-success" (click)="ViewCart()" [style]="{'margin-left': '.5em'}">
                 </p-button>
             </div>

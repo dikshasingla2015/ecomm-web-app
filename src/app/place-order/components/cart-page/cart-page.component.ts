@@ -53,4 +53,8 @@ export class CartPageComponent implements OnInit {
     this.getTotalPrice();
   }
 
+  checkout() {
+    this.router.navigateByUrl('/placeorder/checkout');
+  }
+
 }

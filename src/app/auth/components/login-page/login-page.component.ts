@@ -20,7 +20,6 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   loginForm!: FormGroup;
 
   message!: string;
-  roles: string[] = [];
   userNameControl!: FormControl;
   passwordControl!: FormControl;
 
@@ -38,7 +37,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  onLoginFormSubmit() {
+  onLoginFormSubmit(): void {
     const user: logindetails = this.loginForm.value as logindetails;
     this.userService.getUserData(user.username, user.password).subscribe(res => {
       if (res !== undefined) {
@@ -64,7 +63,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid

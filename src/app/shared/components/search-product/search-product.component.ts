@@ -17,7 +17,7 @@ export class SearchProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.searchNameControl = new FormControl('', [Validators.minLength(1)]);
+    this.searchNameControl = new FormControl('', []);
     this.searchForm = new FormGroup({
       searchName: this.searchNameControl,
     });
@@ -27,7 +27,7 @@ export class SearchProductComponent implements OnInit {
     this.searchText.emit(this.searchForm.value.searchName);
   }
 
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid

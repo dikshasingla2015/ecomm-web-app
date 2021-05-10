@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/core/services/cart.service';
+import { Cart } from 'src/app/core/models/cart.model';
 
 @Component({
   selector: 'app-checkout-page',
@@ -11,41 +13,55 @@ import { Router } from '@angular/router';
 })
 export class CheckoutPageComponent implements OnInit {
 
-  registrationForm!: FormGroup;
+  orderDetails: Cart[] = [];
+
+  totalAmount: number = 0;
+
+  userDetailsForm!: FormGroup;
 
   firstNameControl!: FormControl;
   lastNameControl!: FormControl;
   middleNameControl!: FormControl;
   emailControl!: FormControl;
-  telephoneControl!: FormControl;
+  mobileNoControl!: FormControl;
   addressControl!: FormControl;
   cityControl!: FormControl;
   stateControl!: FormControl;
   zipCodeControl!: FormControl;
 
-  constructor(private router: Router, private messageService: MessageService) { }
+  constructor(private router: Router, private messageService: MessageService,
+    private readonly cartService: CartService) { }
 
   ngOnInit() {
+
+    this.cartService.getCart().subscribe(data => {
+      this.orderDetails = data;
+    });
+    if (this.orderDetails.length === 0) {
+      this.router.navigateByUrl('/placeorder/cart');
+      return;
+    }
+
+    this.totalAmount = this.cartService.getTotalCartPrice();
+
     this.firstNameControl = new FormControl('', [Validators.required, Validators.minLength(3),
     Validators.pattern('[a-zA-Z ,]+')]);
-    this.lastNameControl = new FormControl('', [Validators.required, Validators.minLength(4),
+    this.lastNameControl = new FormControl('', [Validators.required, Validators.minLength(3),
     Validators.pattern('[a-zA-Z ,]+')]);
     this.middleNameControl = new FormControl('', []);
-    this.emailControl = new FormControl('', [Validators.required, Validators.minLength(4),
-    Validators.email]);
-    this.telephoneControl = new FormControl('', [Validators.required, Validators.maxLength(15),
-    Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$')]);
+    this.emailControl = new FormControl('', [Validators.required, Validators.email]);
+    this.mobileNoControl = new FormControl('', [Validators.required, Validators.pattern('^\\+(?:[0-9] ?){6,14}[0-9]$')]);
     this.addressControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
     this.cityControl = new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]+')]);
     this.stateControl = new FormControl('', [Validators.required]);
     this.zipCodeControl = new FormControl('', [Validators.required, Validators.pattern('[0-9]+')]);
 
-    this.registrationForm = new FormGroup({
+    this.userDetailsForm = new FormGroup({
       firstName: this.firstNameControl,
       lastName: this.lastNameControl,
       middleName: this.middleNameControl,
       email: this.emailControl,
-      telephone: this.telephoneControl,
+      mobileNo: this.mobileNoControl,
       address: this.addressControl,
       city: this.cityControl,
       state: this.stateControl,
@@ -53,41 +69,26 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
-  onFormSubmit() {
-    const newUser = this.registrationForm.value;
-    console.log(newUser);
-
-    // this.authService.saveUserDetails(newUser).subscribe(
-    //   res => {
-    //     this.authService.newUserDetails = res as registrationdetails;
-    //     this.router.navigateByUrl('/confirm');
-    //   },
-    //   error => {
-    //     alert("Provided Email Already exist!");
-    //     this.registrationForm.reset();
-    //     this.router.navigateByUrl('/new');
-    //   });
-  }
-
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid
     };
   }
 
-  onCancelClicked() {
-    this.registrationForm.reset();
-    // this.authService.newUserDetails = null;
+  onCancelClicked(): void {
+    this.userDetailsForm.reset();
     this.router.navigateByUrl('/placeorder/cart');
   }
 
-  onPlaceOrderClicked() {
+  onPlaceOrderClicked(): void {
     this.messageService.add({
       severity: 'success', summary: 'Success',
       detail: 'Order Placed Successfully.'
     });
     this.messageService.clear('c');
+    this.cartService.clearCart();
+    this.router.navigate(['/']);
   }
 
 }

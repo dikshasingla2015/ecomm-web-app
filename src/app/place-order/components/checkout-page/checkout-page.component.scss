@@ -1,0 +1,48 @@
+.container{
+    max-width: 1250px;
+    margin-top: 10px;
+}
+
+.cart-page-header h3 {
+    font-size:30px;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    text-align: center;
+    color:brown;
+}
+
+.product-title{
+    color: #1d1d20;
+    max-width: 100%;
+    text-align: left;
+}
+.card{
+    padding: 0.3rem;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 9px;
+}
+
+.cart-total-row {
+    line-height: 30px;
+}
+.cart-total-label {
+    text-align: left;
+    font-size:16px;
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+.cart-total-value {
+    text-align: right;
+    font-size:16px;
+    font-family: "Playfair Display";
+}
+.cart-total-price {
+    color:black;
+    font-size:16px;
+    font-family: "Playfair Display";
+}
+
+.td-text{
+    text-align: center;
+    font-weight: 500;
+}
