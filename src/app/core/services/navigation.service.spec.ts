@@ -13,4 +13,15 @@ describe('NavigationService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should set previous URL', () => {
+    const msg = '/home';
+    service.setPreviousURL(msg);
+    service.getPreviousURL().subscribe(res => expect(res).toEqual(msg));
+  });
+
+  it('should get previous URL', () => {
+    service.getPreviousURL().subscribe(res => expect(res).toEqual(''));
+  });
+
 });

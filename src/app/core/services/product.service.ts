@@ -11,7 +11,7 @@ export class ProductService {
 
   productDataSubject = new BehaviorSubject<ProductModel[]>([]);
 
-  private PRODUCT_SERVICE_BASE_URL = '/assets/templates';
+  readonly PRODUCT_SERVICE_BASE_URL = '/assets/templates';
 
   constructor(private readonly http: HttpClient) { }
 

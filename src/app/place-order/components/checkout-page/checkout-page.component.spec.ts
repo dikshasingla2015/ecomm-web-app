@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CartService } from 'src/app/core/services/cart.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { CheckoutPageComponent } from './checkout-page.component';
+import { HttpLoaderFactory } from 'src/app/app.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('CheckoutPageComponent', () => {
   let component: CheckoutPageComponent;
@@ -8,9 +13,21 @@ describe('CheckoutPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckoutPageComponent ]
+      declarations: [CheckoutPageComponent],
+      providers: [CartService],
+      imports: [
+        RouterTestingModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+          },
+        }),
+        HttpClientModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
