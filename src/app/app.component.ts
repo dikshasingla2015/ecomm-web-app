@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
 import { NavigationService } from './core/services/navigation.service';
@@ -8,13 +8,12 @@ import { NavigationService } from './core/services/navigation.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ecomm-app-nagp';
 
-  constructor(private readonly router: Router,
-    private readonly navigationService: NavigationService) { }
+  constructor(private readonly router: Router, private readonly navigationService: NavigationService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.router.events
       .pipe(filter((evt: any) => evt instanceof RoutesRecognized), pairwise())
       .subscribe((events: RoutesRecognized[]) => {

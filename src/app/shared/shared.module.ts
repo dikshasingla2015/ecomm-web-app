@@ -11,7 +11,7 @@ const components = [
   HeaderComponent,
   FooterComponent,
   SearchProductComponent
-]
+];
 
 @NgModule({
   declarations: [

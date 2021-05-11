@@ -1,5 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/core/services/cart.service';
@@ -9,13 +8,13 @@ import { Cart } from 'src/app/core/models/cart.model';
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
   styleUrls: ['./checkout-page.component.scss'],
-  providers: [MessageService]
+  providers: []
 })
 export class CheckoutPageComponent implements OnInit {
 
   orderDetails: Cart[] = [];
 
-  totalAmount: number = 0;
+  totalAmount = 0;
 
   userDetailsForm!: FormGroup;
 
@@ -29,10 +28,9 @@ export class CheckoutPageComponent implements OnInit {
   stateControl!: FormControl;
   zipCodeControl!: FormControl;
 
-  constructor(private router: Router, private messageService: MessageService,
-    private readonly cartService: CartService) { }
+  constructor(private router: Router, private readonly cartService: CartService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
     this.cartService.getCart().subscribe(data => {
       this.orderDetails = data;
@@ -82,13 +80,7 @@ export class CheckoutPageComponent implements OnInit {
   }
 
   onPlaceOrderClicked(): void {
-    this.messageService.add({
-      severity: 'success', summary: 'Success',
-      detail: 'Order Placed Successfully.'
-    });
-    this.messageService.clear('c');
     this.cartService.clearCart();
-    this.router.navigate(['/']);
   }
 
 }

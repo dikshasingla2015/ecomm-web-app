@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { logindetails } from 'src/app/core/models/logindetails.model';
+import { LoginDetails } from 'src/app/core/models/logindetails.model';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { NavigationService } from 'src/app/core/services/navigation.service';
 import { UserService } from 'src/app/core/services/user.service';
@@ -14,7 +14,7 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class LoginPageComponent implements OnInit, OnDestroy {
 
-  previousUrl: string = '';
+  previousUrl = '';
   subscription!: Subscription;
 
   loginForm!: FormGroup;
@@ -23,11 +23,13 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   userNameControl!: FormControl;
   passwordControl!: FormControl;
 
-  constructor(private authService: AuthService, private router: Router,
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router: Router,
     private readonly userService: UserService,
     private readonly navigationService: NavigationService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.userNameControl = new FormControl('', [Validators.required, Validators.email]);
     this.passwordControl = new FormControl('', [Validators.required, Validators.minLength(5),
     Validators.maxLength(8)]);
@@ -38,11 +40,11 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   }
 
   onLoginFormSubmit(): void {
-    const user: logindetails = this.loginForm.value as logindetails;
+    const user: LoginDetails = this.loginForm.value as LoginDetails;
     this.userService.getUserData(user.username, user.password).subscribe(res => {
       if (res !== undefined) {
         this.authService.login(user).subscribe(
-          res => {
+          () => {
             this.subscription = this.navigationService.getPreviousURL().subscribe(data => {
               this.previousUrl = data;
             });
@@ -55,7 +57,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
             console.log(error);
           });
       } else {
-        this.message = "Invalid Login Credentials";
+        this.message = 'Invalid Login Credentials';
         this.loginForm.reset();
       }
     }, (error) => {

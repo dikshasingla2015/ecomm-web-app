@@ -10,7 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-export function HttpLoaderFactory(httpClient: HttpClient) {
+export function HttpLoaderFactory(httpClient: HttpClient): any {
   return new TranslateHttpLoader(httpClient);
 }
 

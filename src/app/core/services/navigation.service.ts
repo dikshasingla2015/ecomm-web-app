@@ -10,7 +10,7 @@ export class NavigationService {
 
   constructor() { }
 
-  setPreviousURL(previous: string) {
+  setPreviousURL(previous: string): void {
     this.previousURL.next(previous);
   }
 

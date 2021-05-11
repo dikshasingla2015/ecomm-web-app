@@ -11,9 +11,9 @@ export class ProductService {
 
   productDataSubject = new BehaviorSubject<ProductModel[]>([]);
 
-  private PRODUCT_SERVICE_BASE_URL = "/assets/templates";
+  private PRODUCT_SERVICE_BASE_URL = '/assets/templates';
 
-  constructor(private readonly _http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   public getProducts(): Observable<ProductModel[]> {
     return this.productDataSubject.asObservable();
@@ -21,16 +21,16 @@ export class ProductService {
 
   public getAllProducts(): Observable<ProductModel[]> {
     const url = `${this.PRODUCT_SERVICE_BASE_URL}/db.json`;
-    this._http.get<ProductModel[]>(url).subscribe(data => {
+    this.http.get<ProductModel[]>(url).subscribe(data => {
       this.productDataSubject.next(data);
     });
-    return this._http.get<ProductModel[]>(url);
+    return this.http.get<ProductModel[]>(url);
   }
 
   public getProductData(productId: string): Observable<ProductModel> {
     return this.getAllProducts().pipe(
       map(items =>
-        items.filter(item => item.id === productId)[0]))
+        items.filter(item => item.id === productId)[0]));
   }
 
   public getProductDataByName(name: string): void {

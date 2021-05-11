@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { logindetails } from '../models/logindetails.model';
+import { LoginDetails } from '../models/logindetails.model';
 
 const USERNAME_KEY = 'AuthUserName';
 
@@ -13,13 +13,13 @@ export class AuthService {
 
   constructor() { }
 
-  public signOut() {
+  public signOut(): void {
     localStorage.removeItem(USERNAME_KEY);
     localStorage.clear();
     this.isLoginSubject.next(false);
   }
 
-  public saveUsername(username: string) {
+  public saveUsername(username: string): void {
     localStorage.removeItem(USERNAME_KEY);
     localStorage.setItem(USERNAME_KEY, username);
   }
@@ -32,10 +32,10 @@ export class AuthService {
     return this.isLoginSubject.asObservable();
   }
 
-  public login(user: logindetails): Observable<string> {
+  public login(user: LoginDetails): Observable<string> {
     this.saveUsername(user.username);
     this.isLoginSubject.next(true);
-    return of("User Logged in Successfully.");
+    return of('User Logged in Successfully.');
   }
 
   public isAuthenticated(): boolean {

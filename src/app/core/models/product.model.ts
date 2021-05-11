@@ -4,9 +4,9 @@ export interface ProductModel {
     brand: string;
     color: string;
     price: number;
-    description:string;
-    imageURL:string;
-    quantity:number;
-    features:string;
-    category:string;
+    description: string;
+    imageURL: string;
+    quantity: number;
+    features: string;
+    category: string;
 }

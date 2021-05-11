@@ -11,21 +11,21 @@ export class CartService {
 
   constructor() { }
 
-  addProduct(cart: Cart) {
-    let cartData = this.cartSubject.getValue();
-    let productItem = cartData.find(item => item.product.id === cart.product.id);
+  addProduct(cart: Cart): void {
+    const cartData = this.cartSubject.getValue();
+    const productItem = cartData.find(item => item.product.id === cart.product.id);
     productItem ? productItem.quantity += cart.quantity : cartData.push(cart);
     this.cartSubject.next(cartData);
   }
 
-  removeProduct(index: number) {
-    let cartData = this.cartSubject.getValue();
+  removeProduct(index: number): void {
+    const cartData = this.cartSubject.getValue();
     cartData.splice(index, 1);
     this.cartSubject.next(cartData);
   }
 
   getTotalCartPrice(): number {
-    let cartData = this.cartSubject.getValue();
+    const cartData = this.cartSubject.getValue();
     return cartData.reduce((totalPrice, item) => totalPrice + item.product.price * item.quantity, 0);
   }
 
@@ -33,19 +33,19 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
-  incrementProductQuantity(index: number) {
-    let cartData = this.cartSubject.getValue();
+  incrementProductQuantity(index: number): void {
+    const cartData = this.cartSubject.getValue();
     cartData[index].quantity += 1;
     this.cartSubject.next(cartData);
   }
 
-  decrementProductQuantity(index: number) {
-    let cartData = this.cartSubject.getValue();
+  decrementProductQuantity(index: number): void {
+    const cartData = this.cartSubject.getValue();
     cartData[index].quantity -= 1;
     this.cartSubject.next(cartData);
   }
 
-  clearCart() {
+  clearCart(): void {
     this.cartSubject.next([]);
   }
 

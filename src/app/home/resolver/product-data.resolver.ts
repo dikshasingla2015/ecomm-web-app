@@ -13,10 +13,10 @@ import { ProductService } from 'src/app/core/services/product.service';
 })
 export class ProductDataResolver implements Resolve<ProductModel> {
 
-  constructor(private readonly _productService: ProductService) { }
+  constructor(private readonly productService: ProductService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductModel> {
     const productId = route.paramMap.get('productId');
-    return this._productService.getProductData(productId != null ? productId : "");
+    return this.productService.getProductData(productId != null ? productId : '');
   }
 }

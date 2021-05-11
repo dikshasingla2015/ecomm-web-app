@@ -9,13 +9,13 @@ import { User } from '../models/user.model';
 })
 export class UserService {
 
-  private USER_SERVICE_BASE_URL = "/assets/templates";
+  private USER_SERVICE_BASE_URL = '/assets/templates';
 
-  constructor(private readonly _http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   public getAllUsers(): Observable<User[]> {
     const url = `${this.USER_SERVICE_BASE_URL}/user.json`;
-    return this._http.get<User[]>(url);
+    return this.http.get<User[]>(url);
   }
 
   public getUserData(userName: string, password: string): Observable<User> {

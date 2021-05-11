@@ -12,7 +12,8 @@ export class HomePageComponent implements OnInit {
 
   products: ProductModel[] = [];
 
-  constructor(private readonly route: ActivatedRoute,
+  constructor(
+    private readonly route: ActivatedRoute,
     private readonly productService: ProductService) { }
 
   ngOnInit(): void {

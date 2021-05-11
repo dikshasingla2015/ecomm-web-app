@@ -11,7 +11,7 @@ import { CartService } from 'src/app/core/services/cart.service';
 export class CartPageComponent implements OnInit {
 
   cartData: Cart[] = [];
-  totalPrice: number = 0;
+  totalPrice = 0;
 
   constructor(private readonly cartService: CartService, private readonly router: Router) { }
 
@@ -19,27 +19,27 @@ export class CartPageComponent implements OnInit {
     this.refreshCartData();
   }
 
-  removeFromCart(index: number) {
+  removeFromCart(index: number): void {
     this.cartService.removeProduct(index);
     this.refreshCartData();
   }
 
-  getCartDetails() {
+  getCartDetails(): void {
     this.cartService.getCart().subscribe(data => {
       this.cartData = data;
     });
   }
 
-  getTotalPrice() {
+  getTotalPrice(): void {
     this.totalPrice = this.cartService.getTotalCartPrice();
   }
 
-  increaseQuantity(index: number) {
+  increaseQuantity(index: number): void {
     this.cartService.incrementProductQuantity(index);
     this.refreshCartData();
   }
 
-  decreaseQuantity(index: number) {
+  decreaseQuantity(index: number): void {
     if (this.cartData[index].quantity > 1) {
       this.cartService.decrementProductQuantity(index);
       this.refreshCartData();
@@ -48,12 +48,12 @@ export class CartPageComponent implements OnInit {
     }
   }
 
-  refreshCartData() {
+  refreshCartData(): void {
     this.getCartDetails();
     this.getTotalPrice();
   }
 
-  checkout() {
+  checkout(): void {
     this.router.navigateByUrl('/placeorder/checkout');
   }
 

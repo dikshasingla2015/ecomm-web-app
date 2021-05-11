@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
+  Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
@@ -13,9 +13,9 @@ import { ProductService } from 'src/app/core/services/product.service';
 })
 export class ProductListResolver implements Resolve<ProductModel[]> {
 
-  constructor(private readonly _productService: ProductService) { }
+  constructor(private readonly productService: ProductService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductModel[]> {
-    return this._productService.getAllProducts();
+    return this.productService.getAllProducts();
   }
 }

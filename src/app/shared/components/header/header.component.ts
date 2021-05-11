@@ -12,14 +12,17 @@ import { ProductService } from 'src/app/core/services/product.service';
 })
 export class HeaderComponent implements OnInit {
 
-  language: string = '';
+  language = '';
 
   loggedIn: any;
 
-  cart: number = 0;
+  cart = 0;
 
-  constructor(private auth: AuthService, private router: Router,
-    private readonly cartService: CartService, public readonly translate: TranslateService,
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private readonly cartService: CartService,
+    public readonly translate: TranslateService,
     private readonly productService: ProductService) {
     translate.addLangs(['en', 'gr']);
     translate.setDefaultLang('en');
@@ -50,7 +53,7 @@ export class HeaderComponent implements OnInit {
     this.translate.use(language);
   }
 
-  searchProductByName(searchText: string):void {
+  searchProductByName(searchText: string): void {
     this.productService.getProductDataByName(searchText);
   }
 
