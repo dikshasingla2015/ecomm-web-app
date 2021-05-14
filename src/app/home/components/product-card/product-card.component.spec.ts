@@ -4,6 +4,10 @@ import { CardModule } from 'primeng/card';
 import { ProductModel } from 'src/app/core/models/product.model';
 
 import { ProductCardComponent } from './product-card.component';
+import { ButtonModule } from 'primeng/button';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('ProductCardComponent', () => {
   let component: ProductCardComponent;
@@ -15,7 +19,16 @@ describe('ProductCardComponent', () => {
       declarations: [ProductCardComponent],
       imports: [
         RouterTestingModule,
-        CardModule
+        CardModule,
+        ButtonModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+          },
+        }),
+        HttpClientModule
       ]
     })
       .compileComponents();
@@ -33,6 +46,7 @@ describe('ProductCardComponent', () => {
       features: '',
       category: 'Footwear',
       quantity: 5,
+      ratings: 4
     };
     fixture = TestBed.createComponent(ProductCardComponent);
     component = fixture.componentInstance;

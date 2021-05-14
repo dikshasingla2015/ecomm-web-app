@@ -4,10 +4,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from './app.module';
+
 import { NavigationService } from './core/services/navigation.service';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SearchProductComponent } from './shared/components/search-product/search-product.component';
+import { ShowCategoryTreeComponent } from './shared/components/show-category-tree/show-category-tree.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -30,7 +32,8 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        SearchProductComponent
+        SearchProductComponent,
+        ShowCategoryTreeComponent
       ],
     }).compileComponents();
   });

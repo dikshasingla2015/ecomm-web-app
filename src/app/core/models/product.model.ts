@@ -9,4 +9,5 @@ export interface ProductModel {
     quantity: number;
     features: string;
     category: string;
+    ratings: number;
 }

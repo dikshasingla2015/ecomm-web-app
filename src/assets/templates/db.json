@@ -13,7 +13,8 @@
             "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":4
     },
     {
         "id": "1",
@@ -29,7 +30,8 @@
             "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":4
     },
     {
         "id": "1",
@@ -45,7 +47,8 @@
             "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":4
     },
     {
         "id": "2",
@@ -61,7 +64,8 @@
             "Memory, Storage & SIM: 4GB RAM | 64GB storage expandable up to 512GB| Dual SIM with dual standby (4G+4G)"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":3
     },
     {
         "id": "3",
@@ -77,7 +81,8 @@
             "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":4.5
     },
     {
         "id": "3",
@@ -93,7 +98,8 @@
             "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
         ],
         "category": "Mobile",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":3.5
     },
     {
         "id": "4",
@@ -105,7 +111,8 @@
         "imageURL": "",
         "features": "",
         "category": "Footwear",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":4.2
     },
     {
         "id": "5",
@@ -117,6 +124,7 @@
         "imageURL": "",
         "features": "",
         "category": "Clothes",
-        "quantity": 5
+        "quantity": 5,
+        "ratings":3.3
     }
 ]

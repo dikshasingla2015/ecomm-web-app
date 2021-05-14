@@ -70,6 +70,7 @@ describe('HomePageComponent', () => {
         features: '',
         category: 'Footwear',
         quantity: 5,
+        ratings: 4
       },
       {
         id: '2',
@@ -82,6 +83,7 @@ describe('HomePageComponent', () => {
         features: '',
         category: 'Mobile',
         quantity: 5,
+        ratings: 4
       }
     ];
     fixture = TestBed.createComponent(HomePageComponent);

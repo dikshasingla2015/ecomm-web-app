@@ -8,6 +8,9 @@
                 <div class="product-name">{{product.name}}</div>
                 <div class="product-description">{{product.description}}</div>
                 <span class="product-price">{{product.price}}</span>
+                <span class="product-ratings">
+                    <app-product-ratings [starRating]="product.ratings"></app-product-ratings>
+                </span>
             </div>
             <ul class="list-unstyled">
                 <li>{{ 'HOME.FEATURES' | translate }}:

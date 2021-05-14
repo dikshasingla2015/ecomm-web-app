@@ -10,8 +10,10 @@ import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { ProductModel } from 'src/app/core/models/product.model';
 import { CartService } from 'src/app/core/services/cart.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ViewProductDetailsComponent } from './view-product-details.component';
+import { ProductRatingsComponent } from '../product-ratings/product-ratings.component';
 
 describe('ViewProductDetailsComponent', () => {
   let component: ViewProductDetailsComponent;
@@ -22,7 +24,8 @@ describe('ViewProductDetailsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        ViewProductDetailsComponent
+        ViewProductDetailsComponent,
+        ProductRatingsComponent
       ],
       providers: [
         {
@@ -49,7 +52,8 @@ describe('ViewProductDetailsComponent', () => {
             deps: [HttpClient],
           },
         }),
-        HttpClientModule
+        HttpClientModule,
+        NgbModule
       ]
     })
       .compileComponents();
@@ -67,6 +71,7 @@ describe('ViewProductDetailsComponent', () => {
       features: '',
       category: 'Footwear',
       quantity: 5,
+      ratings: 4
     };
     fixture = TestBed.createComponent(ViewProductDetailsComponent);
     component = fixture.componentInstance;

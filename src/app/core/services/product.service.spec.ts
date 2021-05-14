@@ -32,6 +32,7 @@ describe('ProductService', () => {
       features: '',
       category: 'Footwear',
       quantity: 5,
+      ratings: 4
     }
   ];
 

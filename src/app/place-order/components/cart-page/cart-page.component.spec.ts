@@ -53,6 +53,7 @@ describe('CartPageComponent', () => {
           features: '',
           category: 'Footwear',
           quantity: 5,
+          ratings: 4
         },
         quantity: 1
       },
@@ -68,6 +69,7 @@ describe('CartPageComponent', () => {
           features: '',
           category: 'Mobile',
           quantity: 5,
+          ratings: 4
         },
         quantity: 1
       }

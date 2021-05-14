@@ -4,34 +4,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/app.module';
-import { Cart } from 'src/app/core/models/cart.model';
-import { AuthService } from 'src/app/core/services/auth.service';
-import { CartService } from 'src/app/core/services/cart.service';
-import { ProductService } from 'src/app/core/services/product.service';
-import { SearchProductComponent } from '../search-product/search-product.component';
-import { ShowCategoryTreeComponent } from '../show-category-tree/show-category-tree.component';
 
-import { HeaderComponent } from './header.component';
+import { ShowCategoryTreeComponent } from './show-category-tree.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('ShowCategoryTreeComponent', () => {
+  let component: ShowCategoryTreeComponent;
+  let fixture: ComponentFixture<ShowCategoryTreeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        HeaderComponent,
-        SearchProductComponent,
         ShowCategoryTreeComponent
       ],
-      providers: [
-        AuthService,
-        CartService,
-        ProductService
-      ],
       imports: [
-        RouterTestingModule,
-        ReactiveFormsModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
@@ -39,14 +24,16 @@ describe('HeaderComponent', () => {
             deps: [HttpClient],
           },
         }),
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule,
+        RouterTestingModule
       ]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(ShowCategoryTreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

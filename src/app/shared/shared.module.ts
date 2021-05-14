@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchProductComponent } from './components/search-product/search-product.component';
+import { ShowCategoryTreeComponent } from './components/show-category-tree/show-category-tree.component';
 
 const components = [
   HeaderComponent,
@@ -15,7 +16,8 @@ const components = [
 
 @NgModule({
   declarations: [
-    components
+    components,
+    ShowCategoryTreeComponent
   ],
   imports: [
     CommonModule,

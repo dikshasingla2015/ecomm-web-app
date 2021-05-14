@@ -21,6 +21,7 @@ describe('CartService', () => {
         features: '',
         category: 'Footwear',
         quantity: 5,
+        ratings: 4
       },
       quantity: 1
     };
