@@ -44,7 +44,7 @@ export class CartPageComponent implements OnInit {
       this.cartService.decrementProductQuantity(index);
       this.refreshCartData();
     } else {
-      this.removeFromCart(index);
+      return;
     }
   }
 

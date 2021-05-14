@@ -9,10 +9,22 @@ describe('AuthGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthService],
-      imports: [RouterTestingModule]
+      providers: [
+        {
+          provide: AuthService,
+          useValue:
+          {
+            isAuthenticated: () => true
+          }
+        },
+        AuthService
+      ],
+      imports: [
+        RouterTestingModule
+      ]
     });
     guard = TestBed.inject(AuthGuard);
+
   });
 
   it('should be created', () => {

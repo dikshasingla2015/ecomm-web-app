@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -12,10 +12,9 @@ import { UserService } from 'src/app/core/services/user.service';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss']
 })
-export class LoginPageComponent implements OnInit, OnDestroy {
+export class LoginPageComponent implements OnInit {
 
   previousUrl = '';
-  subscription!: Subscription;
 
   loginForm!: FormGroup;
 
@@ -45,7 +44,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       if (res !== undefined) {
         this.authService.login(user).subscribe(
           () => {
-            this.subscription = this.navigationService.getPreviousURL().subscribe(data => {
+            this.navigationService.getPreviousURL().subscribe(data => {
               this.previousUrl = data;
             });
             if (this.previousUrl.includes('home')) {
@@ -70,10 +69,6 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid
     };
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 
 }

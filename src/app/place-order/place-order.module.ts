@@ -6,10 +6,8 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { CheckoutPageComponent } from './components/checkout-page/checkout-page.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -23,11 +21,9 @@ import { TranslateModule } from '@ngx-translate/core';
     PlaceOrderRoutingModule,
     InputTextModule,
     ButtonModule,
-    DropdownModule,
     InputTextareaModule,
     ReactiveFormsModule,
     TableModule,
-    CardModule,
     TranslateModule
   ]
 })

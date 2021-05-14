@@ -1,8 +1,10 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/app.module';
+import { Cart } from 'src/app/core/models/cart.model';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
 import { ProductService } from 'src/app/core/services/product.service';
@@ -27,6 +29,7 @@ describe('HeaderComponent', () => {
       ],
       imports: [
         RouterTestingModule,
+        ReactiveFormsModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

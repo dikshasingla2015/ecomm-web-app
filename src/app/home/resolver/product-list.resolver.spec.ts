@@ -10,8 +10,12 @@ describe('ProductListResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ProductService],
-      imports: [HttpClientTestingModule]
+      providers: [
+        ProductService
+      ],
+      imports: [
+        HttpClientTestingModule
+      ]
     });
     resolver = TestBed.inject(ProductListResolver);
     httpTestingController = TestBed.inject(HttpTestingController);

@@ -6,6 +6,11 @@ import { CheckoutPageComponent } from './checkout-page.component';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TableModule } from 'primeng/table';
 
 describe('CheckoutPageComponent', () => {
   let component: CheckoutPageComponent;
@@ -17,6 +22,11 @@ describe('CheckoutPageComponent', () => {
       providers: [CartService],
       imports: [
         RouterTestingModule,
+        InputTextModule,
+        ButtonModule,
+        InputTextareaModule,
+        ReactiveFormsModule,
+        TableModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
@@ -39,4 +49,5 @@ describe('CheckoutPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

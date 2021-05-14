@@ -33,7 +33,7 @@ export class ViewProductDetailsComponent implements OnInit {
     this.addToCartClick = true;
   }
 
-  ViewCart(): void {
+  viewCart(): void {
     this.router.navigateByUrl('/placeorder/cart');
   }
 

@@ -6,40 +6,29 @@ import { CartService } from './cart.service';
 describe('CartService', () => {
   let service: CartService;
 
-  let dummyCart: Cart = {
-    product: {
-      id: '1',
-      name: 'Sports Shoes',
-      brand: 'Reebok',
-      color: 'White',
-      price: 3500,
-      description: '',
-      imageURL: '',
-      features: '',
-      category: 'Footwear',
-      quantity: 5,
-    },
-    quantity: 1
-  };
-
-  let dummyCart1: Cart = {
-    product: {
-      id: '1',
-      name: 'Sports Shoes',
-      brand: 'Reebok',
-      color: 'White',
-      price: 3500,
-      description: '',
-      imageURL: '',
-      features: '',
-      category: 'Footwear',
-      quantity: 5,
-    },
-    quantity: 1
-  };
+  let dummyCart: Cart;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    dummyCart = {
+      product: {
+        id: '1',
+        name: 'Sports Shoes',
+        brand: 'Reebok',
+        color: 'White',
+        price: 3500,
+        description: '',
+        imageURL: '',
+        features: '',
+        category: 'Footwear',
+        quantity: 5,
+      },
+      quantity: 1
+    };
+    TestBed.configureTestingModule({
+      providers: [
+        CartService
+      ]
+    });
     service = TestBed.inject(CartService);
   });
 
@@ -48,7 +37,7 @@ describe('CartService', () => {
   });
 
   it('should decrease the quantity of element of cart', () => {
-    service.addProduct(dummyCart1);
+    service.addProduct(dummyCart);
     service.decrementProductQuantity(0);
     service.getCart().subscribe(res => expect(res[0].quantity).toEqual(0));
   });
@@ -83,6 +72,12 @@ describe('CartService', () => {
   it('should increase the quantity of element of cart', () => {
     service.addProduct(dummyCart);
     service.incrementProductQuantity(0);
+    service.getCart().subscribe(res => expect(res[0].quantity).toEqual(2));
+  });
+
+  it('should increase the quantity of product when added twice', () => {
+    service.addProduct(dummyCart);
+    service.addProduct(dummyCart);
     service.getCart().subscribe(res => expect(res[0].quantity).toEqual(2));
   });
 
