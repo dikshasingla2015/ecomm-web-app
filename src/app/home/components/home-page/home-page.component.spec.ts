@@ -9,7 +9,7 @@ import { CardModule } from 'primeng/card';
 import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { ProductModel } from 'src/app/core/models/product.model';
-import { ProductService } from 'src/app/core/services/product.service';
+import { ProductService } from 'src/app/core/services/product/product.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
 
 import {NgxPaginationModule} from 'ngx-pagination';

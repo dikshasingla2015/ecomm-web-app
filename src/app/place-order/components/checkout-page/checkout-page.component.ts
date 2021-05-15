@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CartService } from 'src/app/core/services/cart.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 import { Cart } from 'src/app/core/models/cart.model';
 
 @Component({

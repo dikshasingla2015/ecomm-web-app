@@ -7,7 +7,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { Cart } from 'src/app/core/models/cart.model';
-import { CartService } from 'src/app/core/services/cart.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 
 import { CartPageComponent } from './cart-page.component';
 

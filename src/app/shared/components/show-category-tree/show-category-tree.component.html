@@ -1,7 +1,7 @@
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown"
         aria-expanded="false" aria-haspopup="true">
-        Select Category
+        {{ 'HEADER.CATEGORY_TEXT' | translate }}
     </a>
     <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
         <div class="dropdown-submenu" *ngFor="let category of categoryData">

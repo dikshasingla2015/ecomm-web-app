@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/app.module';
-import { CategoryService } from 'src/app/core/services/category.service';
+import { CategoryService } from 'src/app/core/services/category/category.service';
 
 import { ShowCategoryTreeComponent } from './show-category-tree.component';
 

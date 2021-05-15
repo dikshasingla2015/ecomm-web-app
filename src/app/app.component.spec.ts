@@ -5,7 +5,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from './app.module';
 
-import { NavigationService } from './core/services/navigation.service';
+import { NavigationService } from './core/services/navigation/navigation.service';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SearchProductComponent } from './shared/components/search-product/search-product.component';

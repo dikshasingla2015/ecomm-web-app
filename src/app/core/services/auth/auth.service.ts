@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { LoginDetails } from '../models/logindetails.model';
+import { LoginDetails } from '../../models/logindetails.model';
 
 const USERNAME_KEY = 'AuthUserName';
 

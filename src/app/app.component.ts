@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
-import { NavigationService } from './core/services/navigation.service';
+import { NavigationService } from './core/services/navigation/navigation.service';
 
 @Component({
   selector: 'app-root',

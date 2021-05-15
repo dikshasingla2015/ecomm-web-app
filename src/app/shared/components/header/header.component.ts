@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { AuthService } from 'src/app/core/services/auth.service';
-import { CartService } from 'src/app/core/services/cart.service';
-import { ProductService } from 'src/app/core/services/product.service';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
+import { ProductService } from 'src/app/core/services/product/product.service';
 
 @Component({
   selector: 'app-header',

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CartService } from 'src/app/core/services/cart.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { CheckoutPageComponent } from './checkout-page.component';

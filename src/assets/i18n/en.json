@@ -9,7 +9,8 @@
     "LOGIN": "Login",
     "LOGOUT": "Logout",
     "SEARCH": "Search",
-    "SEARCH_TEXT":"Search product by name"
+    "SEARCH_TEXT":"Search product by name",
+    "CATEGORY_TEXT":"Select Category"
   },
   "LOGIN": {
     "USERNAME": "User Name",

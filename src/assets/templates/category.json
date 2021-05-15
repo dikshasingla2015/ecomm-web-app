@@ -14,29 +14,16 @@
         ]
     },
     {
-        "name": "Fashion",
+        "name": "Bags",
         "children": [
             {
-                "name": "Men",
-                "children": [
-                    {
-                        "name": "T-Shirt"
-                    },
-                    {
-                        "name": "Footwear"
-                    }
-                ]
+                "name": "Backpacks"
             },
             {
-                "name": "Women",
-                "children": [
-                    {
-                        "name": "Dresses"
-                    },
-                    {
-                        "name": "Footwear"
-                    }
-                ]
+                "name": "Ruksacks"
+            },
+            {
+                "name": "Trolley"
             }
         ]
     }

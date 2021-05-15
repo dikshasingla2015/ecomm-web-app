@@ -3,9 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LoginDetails } from 'src/app/core/models/logindetails.model';
-import { AuthService } from 'src/app/core/services/auth.service';
-import { NavigationService } from 'src/app/core/services/navigation.service';
-import { UserService } from 'src/app/core/services/user.service';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { NavigationService } from 'src/app/core/services/navigation/navigation.service';
+import { UserService } from 'src/app/core/services/user/user.service';
 
 @Component({
   selector: 'app-login-page',

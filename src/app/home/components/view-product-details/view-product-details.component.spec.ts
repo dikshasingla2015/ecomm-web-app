@@ -9,7 +9,7 @@ import { CardModule } from 'primeng/card';
 import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { ProductModel } from 'src/app/core/models/product.model';
-import { CartService } from 'src/app/core/services/cart.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ViewProductDetailsComponent } from './view-product-details.component';

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { ProductService } from 'src/app/core/services/product.service';
+import { ProductService } from 'src/app/core/services/product/product.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { ProductDataResolver } from './product-data.resolver';

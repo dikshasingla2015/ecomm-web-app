@@ -5,9 +5,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { Cart } from 'src/app/core/models/cart.model';
-import { AuthService } from 'src/app/core/services/auth.service';
-import { CartService } from 'src/app/core/services/cart.service';
-import { ProductService } from 'src/app/core/services/product.service';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { CartService } from 'src/app/core/services/cart/cart.service';
+import { ProductService } from 'src/app/core/services/product/product.service';
 import { SearchProductComponent } from '../search-product/search-product.component';
 import { ShowCategoryTreeComponent } from '../show-category-tree/show-category-tree.component';
 

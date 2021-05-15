@@ -1,18 +1,22 @@
 [
     {
         "id": "1",
-        "name": "OnePlus Nord 5G",
+        "name": "Sony WH-XB700",
         "brand": "OnePlus",
-        "color": "Blue Marble",
-        "price": 30000,
-        "description": "Blue Marble, 12GB RAM, 256GB Storage",
-        "imageURL": "assets/images/oneplus.jpg",
+        "color": "Black",
+        "price": 8500,
+        "description": "30 Hours Battery Life, Passive Operation",
+        "imageURL": "assets/images/sony-xb.jpg",
         "features": [
-            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
-            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
-            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
+            "Headphones made for electronic dance music (EDM)",
+            "Wireless Extra Bass Headphones for deep and punchy bass sound",
+            "Quick charge for 10min charge for 90 min play back",
+            "Battery life up to 30hrs for long listening hours",
+            "Sony | Headphones Connect APP for Android /iOS to control sound setting",
+            "Alexa and Google Assistant compatible with Voice Assistant feature",
+            "30mm Driver Unit for Clear and Powerful Sound, tollfree number 1800-103-7799"
         ],
-        "category": "Mobile",
+        "category": "Headphone",
         "quantity": 5,
         "ratings": 4
     },
@@ -42,7 +46,7 @@
         "brand": "boAt",
         "color": "Luscious Black",
         "price": 1499,
-        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "description": "Compatible with Android & iOS",
         "imageURL": "assets/images/boatRockerz.jpg",
         "features": [
             "Battery: Rockerz 450 offers a playback time of up to 15 hours and gets charged to 100% in about 2 hours",
@@ -165,55 +169,170 @@
     },
     {
         "id": "10",
-        "name": "Oneplus Smart Band",
-        "brand": "Oneplus",
-        "color": "Meteorite Black",
-        "price": 2499,
-        "description": "Heart Rate,Sleep Tracking, Android & iOS",
-        "imageURL": "assets/images/OnePlusBand.jpg",
+        "name": "Skybags Stream",
+        "brand": "Skybag",
+        "color": "Blue Spacious",
+        "price": 1790,
+        "description": "Polyester 1811 cm Backpack with Rain Cover",
+        "imageURL": "assets/images/Skybag.jpg",
         "features": [
-            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
-            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
-            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
-            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+            "3 spacious compartments with 1 front zip pocket (NO LAPTOP COMPARTMENT)",
+            "Raincover for Backpack at the bottom",
+            "Warranty type: Manufacturer; 12 months international",
+            "Padded top handle with side bottle holder",
+            "18.5 inch height with dimensions: 35 cms x 22 cms x 46 cms (LxWxH)"
         ],
-        "category": "Smart Watch",
+        "category": "Backpacks",
         "quantity": 5,
-        "ratings": 4.1
+        "ratings": 4
     },
     {
         "id": "11",
-        "name": "Oneplus Smart Band",
-        "brand": "Oneplus",
-        "color": "Meteorite Black",
+        "name": "Swiss Gear 1758 Backpack",
+        "brand": "Swiss Gear",
+        "color": "Grey With Blac",
         "price": 2499,
-        "description": "Heart Rate,Sleep Tracking, Android & iOS",
-        "imageURL": "assets/images/OnePlusBand.jpg",
+        "description": "46.36 x 13.97 x 31.75 cm; 657.71 Grams",
+        "imageURL": "assets/images/swiss-gear.jpg",
         "features": [
-            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
-            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
-            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
-            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+            "Ergonomically contoured, padded shoulder straps with breathable mesh fabric and handy mobile phone pocket",
+            "Padded, Airflow back panel with mesh fabric for superior back ventilation and support. Internal file pocket",
+            "Side water bottle pockets. Media pocket with built-in headphone cord port",
+            "Quick-access, front zippered compartment with internal zip pocket and removable key fob."
         ],
-        "category": "Smart Watch",
+        "category": "Backpacks",
+        "quantity": 5,
+        "ratings": 3.9
+    },
+    {
+        "id": "12",
+        "name": "wildcraft 35 ltrs",
+        "brand": "wildcraft",
+        "color": "Green",
+        "price": 1050,
+        "description": "22.9 x 31.8 x 47 cm; 400 Grams",
+        "imageURL": "assets/images/wildcraft.jpg",
+        "features": [
+            "Outer Material: Polyester, Color: Green",
+            "Capacity: 35 liters; Dimensions: 9 inches x 12.5 inches x 18.5 inches (LxWxH)",
+            "Number of compartments: 2",
+            "Warranty type: Manufacturer; 5 years manufacturer warranty is non-transferable and valid for 5 years from the original date of purchase"
+        ],
+        "category": "Backpacks",
         "quantity": 5,
         "ratings": 4.1
     },
     {
-        "id": "12",
-        "name": "Oneplus Smart Band",
-        "brand": "Oneplus",
-        "color": "Meteorite Black",
-        "price": 2499,
-        "description": "Heart Rate,Sleep Tracking, Android & iOS",
-        "imageURL": "assets/images/OnePlusBand.jpg",
+        "id": "13",
+        "name": "Wildcraft Alpinist 55 Ltrs",
+        "brand": "wildcraft",
+        "color": "Orange",
+        "price": 4500,
+        "description": "22.9 x 33 x 76.2 cm; 2.06 Kilograms",
+        "imageURL": "assets/images/wildcraft_rucksack.jpg",
         "features": [
-            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
-            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
-            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
-            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+            "Outer Material Type: 420D Nylon Dobby, 210D Nylon Double Ripstop; Color: Orange",
+            "Capacity: 55 liters; Weight: 2220 grams; Dimensions: 9 in*13 in*30 in",
+            "Number of compartments: 3",
+            "Comes with hip belt and back padding",
+            "Warranty type: Manufacturer; 5 Years Warranty"
         ],
-        "category": "Smart Watch",
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "14",
+        "name": "Fastrack 40 Ltrs",
+        "brand": "Fastrack",
+        "color": "Grey Rucksack",
+        "price": 2300,
+        "description": "26.7 x 27.9 x 53.3 cm; 1 Kilograms",
+        "imageURL": "assets/images/fasttrack.jpg",
+        "features": [
+            "Outer Material: Polyester, Color: Grey",
+            "Capacity: 40 liters; Dimensions: 10.5 inches x 11 inches x 21 inches (LxWxH)",
+            "Number of compartments: 1",
+            "26.7 x 27.9 x 53.3 Centimeters",
+            "Warranty type: Manufacturer; 1 year manufacturer warranty is non-transferable and valid for 1 year from the original date of purchase"
+        ],
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "15",
+        "name": "Indian Riders 50L",
+        "brand": "Indian Riders",
+        "color": "Olive Green in Forest Print",
+        "price": 1050,
+        "description": "Water-Repellent exterior coating",
+        "imageURL": "assets/images/indianRiders.jpg",
+        "features": [
+            "Outer material:- 1000 denier PU, inner material:- polyester, 1 compartment, 1 Bottle pocket, dimension (lxwxh):- 14x8x22 inches",
+            "Adjustable side and shoulders strap, good design, fashionable, light weight, cozy look, sliders and zippers, waterproof",
+            "good material, provides extra strength and long-lasting performance with the lightest weight possible. The extra strength provided by the double-layer bottom piece makes it very convenient to carry more load on your journeys"
+        ],
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "16",
+        "name": "Skybags Trooper 75 Cms",
+        "brand": "Skybags",
+        "color": "Blue & White",
+        "price": 4800,
+        "description": "Polycarbonate Hardsided Check-in Luggage",
+        "imageURL": "assets/images/skybagtrolley.jpg",
+        "features": [
+            "75 x 30 x 55 cm; 3.98 Kilograms",
+            "Outer Material: Polycarbonate, Casing: Hard, Color: Blue & White",
+            "Capacity: 97 liters; Weight: 3980 grams; Dimensions: 75 cms x 30 cms x 55 cms (LxWxH)",
+            "Warranty type: Manufacturer; 1 year International warranty",
+            "Retractable top and side handles"
+        ],
+        "category": "Trolley",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "17",
+        "name": "Safari Tiffany Polycarbonate",
+        "brand": "Safari",
+        "color": "Printed",
+        "price": 4500,
+        "description": "77 cms Printed Hardsided",
+        "imageURL": "assets/images/safari.jpg",
+        "features": [
+            "30 x 54 x 77 cm; 4.9 Kilograms",
+            "Outer Material: Polycarbonate, Casing: Hard, Color: Printed",
+            "Capacity: 97 liters; Weight: 4900 grams; Dimensions: 30 cms x 54 cms x 77 cms (LxWxH)",
+            "Lock Type: Number Lock, Number of Wheels: 4",
+            "Warranty type: Manufacturer; 5 years international Manufacturer warranty"
+        ],
+        "category": "Trolley",
+        "quantity": 5,
+        "ratings": 3.4
+    },
+    {
+        "id": "18",
+        "name": "Tommy Hilfiger ABS 75 cms",
+        "brand": "Tommy Hilfiger",
+        "color": "White",
+        "price": 8400,
+        "description": "Hardsided Check-in Luggage",
+        "imageURL": "assets/images/tommy.jpg",
+        "features": [
+            "52 x 32 x 75 cm; 5.5 Kilograms",
+            "Outer Material: ABS, Casing: Hard, Color: White",
+            "Water resistant",
+            "Capacity: 125 liters; Dimensions: 52 cms x 32 cms x 75 cms (LxWxH)",
+            "Lock Type: TSA Lock, Number of Wheels: 4",
+            "Laptop Compatibility: No",
+            "Warranty type: Manufacturer; 3 year"
+        ],
+        "category": "Trolley",
         "quantity": 5,
         "ratings": 4.1
     }
