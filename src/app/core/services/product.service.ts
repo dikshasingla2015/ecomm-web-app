@@ -42,11 +42,10 @@ export class ProductService {
       });
   }
 
-  public getProductDataByBrandAndCategory(brandName: string, CategoryName: string): void {
+  public getProductDataByCategory(CategoryName: string): void {
     this.getAllProducts().pipe(
       map(items =>
         items.filter(item =>
-          (item.brand.toLowerCase()).includes(brandName.toLowerCase()) &&
           (item.category.toLowerCase()).includes(CategoryName.toLowerCase())
         )))
       .subscribe(data => {

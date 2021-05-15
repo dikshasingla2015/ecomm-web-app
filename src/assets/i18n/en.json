@@ -17,8 +17,6 @@
     "USERNAME_REQUIRED": "Please enter user name",
     "USERNAME_EMAIL": "username must be of email type",
     "PASSWORD_REQUIRED": "Please enter password",
-    "MIN_PASSWORD_LENGTH": "Password should be atleast 5 character long.",
-    "MAX_PASSWORD_LENGTH": "Password should not be more than 8 characters.",
     "LOGIN_TEXT": "LOGIN",
     "SIGNIN": "Sign In"
   },

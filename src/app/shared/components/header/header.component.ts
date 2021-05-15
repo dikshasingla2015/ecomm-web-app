@@ -57,4 +57,8 @@ export class HeaderComponent implements OnInit {
     this.productService.getProductDataByName(searchText);
   }
 
+  searchProductByCategory(category: string): void {
+    this.productService.getProductDataByCategory(category);
+  }
+
 }

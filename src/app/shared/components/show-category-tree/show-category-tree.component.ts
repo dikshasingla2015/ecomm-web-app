@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Category } from 'src/app/core/models/category.model';
+import { CategoryService } from 'src/app/core/services/category.service';
 
 @Component({
   selector: 'app-show-category-tree',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowCategoryTreeComponent implements OnInit {
 
-  constructor() { }
+  categoryData: Category[] = [];
+
+  @Output()
+  categoryText: EventEmitter<string> = new EventEmitter();
+
+  constructor(private readonly categoryService: CategoryService) {
+    this.categoryService.getAllProductCategory();
+    this.categoryService.getCategory().subscribe(data => {
+      this.categoryData = data;
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  onCategorySelected(category: string) {
+    this.categoryText.emit(category);
   }
 
 }

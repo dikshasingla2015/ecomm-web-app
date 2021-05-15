@@ -17,8 +17,6 @@
         "USERNAME_REQUIRED": "Bitte geben sie einen Benutzernamen ein",
         "USERNAME_EMAIL": "Der Benutzername muss vom E-Mail-Typ sein",
         "PASSWORD_REQUIRED": "Bitte Passwort eingeben",
-        "MIN_PASSWORD_LENGTH": "Das Passwort sollte mindestens 5 Zeichen lang sein.",
-        "MAX_PASSWORD_LENGTH": "Das Passwort sollte nicht länger als 8 Zeichen sein.",
         "LOGIN_TEXT": "ANMELDUNG",
         "SIGNIN": "Einloggen"
     },

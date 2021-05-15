@@ -26,12 +26,6 @@
                     <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.required">
                         {{ 'LOGIN.PASSWORD_REQUIRED' | translate }}
                     </div>
-                    <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.minlength">
-                        {{ 'LOGIN.MIN_PASSWORD_LENGTH' | translate }}
-                    </div>
-                    <div class="invalid-feedback" *ngIf="passwordControl.touched && passwordControl.errors?.maxlength">
-                        {{ 'LOGIN.MAX_PASSWORD_LENGTH' | translate }}
-                    </div>
                 </div>
                 <div style="text-align: center; padding: 3px;">
                     <button pButton pRipple type="button" class="p-button-rounded p-button-success"

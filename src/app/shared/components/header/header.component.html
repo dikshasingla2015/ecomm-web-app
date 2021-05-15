@@ -27,7 +27,7 @@
             }}</button>
         </div>
       </li>
-      <app-show-category-tree></app-show-category-tree>
+      <app-show-category-tree (categoryText)="searchProductByCategory($event)"></app-show-category-tree>
     </ul>
     <app-search-product (searchText)="searchProductByName($event)"></app-search-product>
     &nbsp;&nbsp;

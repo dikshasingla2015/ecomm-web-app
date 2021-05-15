@@ -3,9 +3,9 @@
         "id": "1",
         "name": "OnePlus Nord 5G",
         "brand": "OnePlus",
-        "color": "Gray Onyx",
+        "color": "Blue Marble",
         "price": 30000,
-        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "description": "Blue Marble, 12GB RAM, 256GB Storage",
         "imageURL": "assets/images/oneplus.jpg",
         "features": [
             "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
@@ -14,49 +14,53 @@
         ],
         "category": "Mobile",
         "quantity": 5,
-        "ratings":4
-    },
-    {
-        "id": "1",
-        "name": "OnePlus Nord 5G",
-        "brand": "OnePlus",
-        "color": "Gray Onyx",
-        "price": 30000,
-        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
-        "imageURL": "assets/images/oneplus.jpg",
-        "features": [
-            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
-            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
-            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
-        ],
-        "category": "Mobile",
-        "quantity": 5,
-        "ratings":4
-    },
-    {
-        "id": "1",
-        "name": "OnePlus Nord 5G",
-        "brand": "OnePlus",
-        "color": "Gray Onyx",
-        "price": 30000,
-        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
-        "imageURL": "assets/images/oneplus.jpg",
-        "features": [
-            "48MP+8MP+5MP+2MP quad rear camera with 1080P Video at 30/60 fps, 4k 30fps | 32MP+8MP front dual camera with 4K video capture at 30/60 fps and 1080 video capture at 30/60 fps",
-            "6.44-inch 90Hz fluid Amoled display with 2400 x 1080 pixels resolution | 408ppi",
-            "OxygenOS based on Android 10 operating system with 2.4GHz Kryo 475 Prime + 2.2GHz Kryo 475 Gold + 6x1.8GHz Kryo 475 Silver Qualcomm Snapdragon 765G 5G mobile platform octa core processor, Adreno 620 GPU"
-        ],
-        "category": "Mobile",
-        "quantity": 5,
-        "ratings":4
+        "ratings": 4
     },
     {
         "id": "2",
+        "name": "Infinity (JBL) Glide 510",
+        "brand": "JBL",
+        "color": "Blue",
+        "price": 1699,
+        "description": "Deep Bass, Dual Equalizer, Bluetooth 5.0",
+        "imageURL": "assets/images/JBLGlide.jpg",
+        "features": [
+            "72 Hours Playtime Under Optimum Audio Settings",
+            "Dual Equalizer Modes for Normal & Deep Bass Output. Driver Sensitivity (1KHz / 1mW) 102±3dB. Audio Specifications: Impedence(ohms) 32 ohms",
+            "Deep Bass Output with 36mm Drivers",
+            "Quick Charging (10 minutes of charge gives 2 Hours of playtime)",
+            "Voice Assistant Integration",
+            "Light weight and flat foldable"
+        ],
+        "category": "Headphone",
+        "quantity": 5,
+        "ratings": 4
+    },
+    {
+        "id": "3",
+        "name": "boAt Rockerz 450",
+        "brand": "boAt",
+        "color": "Luscious Black",
+        "price": 1499,
+        "description": "(Gray Onyx, 12GB RAM, 256GB Storage)",
+        "imageURL": "assets/images/boatRockerz.jpg",
+        "features": [
+            "Battery: Rockerz 450 offers a playback time of up to 15 hours and gets charged to 100% in about 2 hours",
+            "Bluetooth: It has Bluetooth v4.2 with a range of 10m and is compatible with Android & iOS",
+            "Micro USB Charging Cable, Warranty Card, User Manual Lightweight Ergonomic Design with Easy Controls",
+            "Instant Voice Assistant"
+        ],
+        "category": "Headphone",
+        "quantity": 5,
+        "ratings": 4
+    },
+    {
+        "id": "4",
         "name": "Redmi 9",
         "brand": "Redmi",
         "color": "Sky Blue",
         "price": 8499,
-        "description": "(Sky Blue, 4GB RAM, 64GB Storage)",
+        "description": "Sky Blue, 4GB RAM, 64GB Storage",
         "imageURL": "assets/images/redmi9.jpeg",
         "features": [
             "13+2MP Rear camera with AI Portrait, AI scene recognition, HDR, Pro mode | 5MP front facing camera",
@@ -65,66 +69,152 @@
         ],
         "category": "Mobile",
         "quantity": 5,
-        "ratings":3
-    },
-    {
-        "id": "3",
-        "name": "Samsung Galaxy M31",
-        "brand": "Samsung",
-        "color": "Ocean Blue",
-        "price": 13999,
-        "description": "(Ocean Blue, 6GB RAM, 128GB Storage)",
-        "imageURL": "assets/images/Samsung.jpg",
-        "features": [
-            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
-            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
-            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
-        ],
-        "category": "Mobile",
-        "quantity": 5,
-        "ratings":4.5
-    },
-    {
-        "id": "3",
-        "name": "Samsung Galaxy M31",
-        "brand": "Samsung",
-        "color": "Ocean Blue",
-        "price": 13999,
-        "description": "(Ocean Blue, 6GB RAM, 128GB Storage)",
-        "imageURL": "assets/images/Samsung.jpg",
-        "features": [
-            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
-            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
-            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
-        ],
-        "category": "Mobile",
-        "quantity": 5,
-        "ratings":3.5
-    },
-    {
-        "id": "4",
-        "name": "Sports Shoes",
-        "brand": "Reebok",
-        "color": "White",
-        "price": 3500,
-        "description": "",
-        "imageURL": "",
-        "features": "",
-        "category": "Footwear",
-        "quantity": 5,
-        "ratings":4.2
+        "ratings": 3
     },
     {
         "id": "5",
-        "name": "Jacket",
-        "brand": "Woodland",
-        "color": "Black",
-        "price": 6000,
-        "description": "",
-        "imageURL": "",
-        "features": "",
-        "category": "Clothes",
+        "name": "Samsung Galaxy M31",
+        "brand": "Samsung",
+        "color": "Ocean Blue",
+        "price": 13999,
+        "description": "Ocean Blue, 6GB RAM, 128GB Storage",
+        "imageURL": "assets/images/Samsung1.jpg",
+        "features": [
+            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
+            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
+            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
+        ],
+        "category": "Mobile",
         "quantity": 5,
-        "ratings":3.3
+        "ratings": 4.5
+    },
+    {
+        "id": "6",
+        "name": "Redmi Note 10 Pro",
+        "brand": "Redmi",
+        "color": "Dark Night",
+        "price": 16999,
+        "description": "Dark Night, 6GB RAM, 128GB Storage",
+        "imageURL": "assets/images/redmiNote1.jpeg",
+        "features": [
+            "Qualcomm Snapdragon 732G with Kryo 470 Octa-core; 8nm process; Up to 2.3GHz clock speed",
+            "64 MP Quad Rear camera with 8MP Ultra-wide, 5MP Telemacro and Portrait lens| 16 MP Front camera",
+            "120Hz high refresh rate FHD+ (1080x2400) AMOLED Dot display; 16.9 centimeters (6.67 inch); 20:9 aspect ratio; HDR 10 support",
+            "5020 mAH large battery with 33W fast charger in-box and Type-C connectivity",
+            "6GB RAM | 128GB UFS 2.2 storage expandable up to 512GB with dedicated SD card slot | Dual SIM (nano+nano) dual standby (4G+4G)"
+        ],
+        "category": "Mobile",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "7",
+        "name": "Mi Smart Band 5",
+        "brand": "Redmi",
+        "color": "Black",
+        "price": 2499,
+        "description": "Magnetic Charging, 2 Weeks Battery Life",
+        "imageURL": "assets/images/MismartBand.jpg",
+        "features": [
+            "1.1” Full touch AMOLED color display",
+            "PAI (Personal Activity Intelligence) – Single matrix to track your all fitness related activities.",
+            "Tracks 11 professional sports mode (including Yoga and Rope skipping). Run on the go with Automatic activity detection (Running and Walking).",
+            "5ATM Water Resistant- recognizes swimming mode.",
+            "Smart Features: App notifications, control music, manage your calls, check Weather, alarm, idle alert, locate your phone etc.",
+            "24X7 Sleep monitoring along with REM (Rapid Eye Movement) Sleep monitoring."
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 4.4
+    },
+    {
+        "id": "8",
+        "name": "Honor Band 5",
+        "brand": "Honor",
+        "color": "Meteorite Black",
+        "price": 1900,
+        "description": "Monitor sleep, track your fitness activities",
+        "imageURL": "assets/images/HonorBand.jpg",
+        "features": [
+            "0.95 Inch (2.41 cms) AMOLED Touch Large Color Screen: Adjustable screen brightness, dynamic and vivid display; home button control, Belt clip design makes band firmly attached to your wrist",
+            "Scientific Sleep Monitoring: TruSleep allows sleep status recognition, collection and analyzing data",
+            "HONOR Band 5's SpO2 Monitor tracks oxygen saturation levels in the bloodstream so you can assess how your body is adapting during workouts or at high altitudes",
+            "Smart Music & Volume Controls : Don't stop your workout for anything. Change the song, adjust the volume from your HONOR Band 5 effortlessly"
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 3.8
+    },
+    {
+        "id": "9",
+        "name": "Oneplus Smart Band",
+        "brand": "Oneplus",
+        "color": "Meteorite Black",
+        "price": 2499,
+        "description": "Heart Rate,Sleep Tracking, Android & iOS",
+        "imageURL": "assets/images/OnePlusBand.jpg",
+        "features": [
+            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
+            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
+            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
+            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "10",
+        "name": "Oneplus Smart Band",
+        "brand": "Oneplus",
+        "color": "Meteorite Black",
+        "price": 2499,
+        "description": "Heart Rate,Sleep Tracking, Android & iOS",
+        "imageURL": "assets/images/OnePlusBand.jpg",
+        "features": [
+            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
+            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
+            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
+            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "11",
+        "name": "Oneplus Smart Band",
+        "brand": "Oneplus",
+        "color": "Meteorite Black",
+        "price": 2499,
+        "description": "Heart Rate,Sleep Tracking, Android & iOS",
+        "imageURL": "assets/images/OnePlusBand.jpg",
+        "features": [
+            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
+            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
+            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
+            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "12",
+        "name": "Oneplus Smart Band",
+        "brand": "Oneplus",
+        "color": "Meteorite Black",
+        "price": 2499,
+        "description": "Heart Rate,Sleep Tracking, Android & iOS",
+        "imageURL": "assets/images/OnePlusBand.jpg",
+        "features": [
+            "Access key mobile features directly from your wrist â includes music, camera shutter controls, call - message notifications and many more.",
+            "5ATM and IP68 certified, the band is dust and water resistant up to 50 meters for 10 minutes.",
+            "On-demand daytime spot checks and continuous sleep monitoring of blood oxygen saturation (Sp02) quickly and accurately highlight potential health issues.",
+            " the OnePlus Health app analyzes health data, provides insights and advice on your personal health"
+        ],
+        "category": "Smart Watch",
+        "quantity": 5,
+        "ratings": 4.1
     }
 ]
