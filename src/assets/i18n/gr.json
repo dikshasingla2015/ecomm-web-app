@@ -73,6 +73,10 @@
         "ZIPCODE_REQUIRED": "Bitte geben Sie Ihre Postleitzahl ein",
         "ZIPCODE_PATTERN": "nur Ziffern erlaubt",
         "CANCEL": "Bestellung stornieren",
-        "PLACEORDER": "Bestellung aufgeben"
+        "PLACEORDER": "Bestellung aufgeben",
+        "SUCCESS_MSG": "Ihre Bestellung wurde erfolgreich aufgegeben.",
+        "THANK_MSG": "Danke für ihren Einkauf.",
+        "CONTACT_MSG": "Bei Fragen können Sie sich gerne verbinden.",
+        "CONTINUE_SHOPPING": "Mit dem Einkaufen fortfahren"
     }
 }

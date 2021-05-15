@@ -53,10 +53,10 @@ describe('LoginPageComponent', () => {
     mockUserService = fixture.debugElement.injector.get(UserService);
     spyOn(mockUserService, 'getUserData').and.callFake(() => {
       return of({
-        userId: "1",
-        userName: "abc123@nagarro.com",
-        phoneNumber: "9834125612",
-        password: "abc123"
+        userId: '1',
+        userName: 'abc123@nagarro.com',
+        phoneNumber: '9834125612',
+        password: 'abc123'
       });
     });
     mockAuthService = fixture.debugElement.injector.get(AuthService);

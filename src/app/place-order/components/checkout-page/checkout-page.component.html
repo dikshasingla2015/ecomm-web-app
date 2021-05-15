@@ -19,7 +19,8 @@
                                 class="product-image" /></td>
                         <td class="product-title td-text">{{product.product.name}}</td>
                         <td class="td-text" style="text-align: center;">{{product.quantity}}</td>
-                        <td class="td-text" style="text-align: center;">{{product.product.price * product.quantity}}
+                        <td class="td-text" style="text-align: center;">
+                            {{product.product.price * product.quantity | currency :'USD'}}
                         </td>
                     </tr>
                 </ng-template>
@@ -187,10 +188,10 @@
 
 <div class="checkout-page-container">
     <div class="checkout-page-content" *ngIf="orderDetails.length == 0">
-        <h1>Your Order has been placed Successfully.</h1>
-        <h3>Thank you for shopping with us.</h3>
-        <h4>Please feel free to connect in case of any query.</h4>
+        <h1>{{ 'CHECKOUT.SUCCESS_MSG' | translate }}</h1>
+        <h3>{{ 'CHECKOUT.THANK_MSG' | translate }}</h3>
+        <h4>{{ 'CHECKOUT.CONTACT_MSG' | translate }}</h4>
         <button pButton pRipple type="button" class="p-button-rounded p-button-success" routerLink="/">
-            Continue Shopping</button>
+            {{ 'CHECKOUT.CONTINUE_SHOPPING' | translate }}</button>
     </div>
 </div>

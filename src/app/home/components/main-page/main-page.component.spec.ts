@@ -12,7 +12,7 @@ describe('MainPageComponent', () => {
       declarations: [
         MainPageComponent
       ],
-      imports:[
+      imports: [
         RouterTestingModule
       ]
     })

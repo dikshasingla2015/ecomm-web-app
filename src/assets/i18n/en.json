@@ -73,6 +73,10 @@
     "ZIPCODE_REQUIRED": "Please Enter your zip code",
     "ZIPCODE_PATTERN": "only digits allowed",
     "CANCEL": "Cancel Order",
-    "PLACEORDER": "Place Order"
+    "PLACEORDER": "Place Order",
+    "SUCCESS_MSG":"Your Order has been placed Successfully.",
+    "THANK_MSG":"Thank you for shopping with us.",
+    "CONTACT_MSG":"Please feel free to connect in case of any query.",
+    "CONTINUE_SHOPPING":"Continue Shopping"
   }
 }
