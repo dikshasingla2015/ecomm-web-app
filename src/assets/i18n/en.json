@@ -8,7 +8,8 @@
     "CART": "Cart",
     "LOGIN": "Login",
     "LOGOUT": "Logout",
-    "SEARCH": "Search"
+    "SEARCH": "Search",
+    "SEARCH_TEXT":"Search product by name"
   },
   "LOGIN": {
     "USERNAME": "User Name",

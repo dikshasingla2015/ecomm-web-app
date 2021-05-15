@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
@@ -169,11 +170,11 @@ describe('CartPageComponent', () => {
     expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(2);
   });
 
-  it('should navigate to checkout page', () => {
-    const navigateSpy = spyOn(component['router'], 'navigateByUrl');
+  it('should navigate to checkout page', inject([Router], (router: Router) => {
+    spyOn(router, 'navigateByUrl').and.stub();
     component.checkout();
-    expect(navigateSpy).toHaveBeenCalledWith('/placeorder/checkout');
-  });
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/placeorder/checkout');
+  }));
 
   it('should not do anything decrement is called with product quantity 1', () => {
     component.cartData = dummyData;

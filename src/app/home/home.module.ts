@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -31,6 +32,7 @@ const components = [
     NgbModule,
     CardModule,
     ButtonModule,
+    NgxPaginationModule,
     TranslateModule
   ]
 })

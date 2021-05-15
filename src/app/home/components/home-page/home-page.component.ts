@@ -12,6 +12,10 @@ export class HomePageComponent implements OnInit {
 
   products: ProductModel[] = [];
 
+  totalRecords!: number;
+
+  page = 1;
+
   constructor(
     private readonly route: ActivatedRoute,
     private readonly productService: ProductService) { }

@@ -8,7 +8,8 @@
         "CART": "Wagen",
         "LOGIN": "Anmeldung",
         "LOGOUT": "Ausloggen",
-        "SEARCH": "Suche"
+        "SEARCH": "Suche",
+        "SEARCH_TEXT":"Produkt suchen"
     },
     "LOGIN": {
         "USERNAME": "Nutzername",

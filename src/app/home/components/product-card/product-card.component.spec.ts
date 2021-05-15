@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CardModule } from 'primeng/card';
 import { ProductModel } from 'src/app/core/models/product.model';
@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 describe('ProductCardComponent', () => {
   let component: ProductCardComponent;
@@ -70,11 +71,11 @@ describe('ProductCardComponent', () => {
     expect(fixture.nativeElement.querySelector('p').textContent).toBe('dummy data test case');
   });
 
-  it('should navigate to product description page', () => {
+  it('should navigate to product description page', inject([Router], (router: Router) => {
     component.productData = product;
-    const navigateSpy = spyOn(component['router'], 'navigateByUrl');
+    spyOn(router, 'navigateByUrl').and.stub();
     component.viewProductDescription('1');
-    expect(navigateSpy).toHaveBeenCalledWith('/home/viewproduct/1');
-  });
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/home/viewproduct/1');
+  }));
 
 });

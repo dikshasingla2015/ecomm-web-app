@@ -27,6 +27,10 @@ export class SearchProductComponent implements OnInit {
     this.searchText.emit(this.searchForm.value.searchName);
   }
 
+  onSearchInput(inputSearch: string): void {
+    this.searchText.emit(inputSearch);
+  }
+
   getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,

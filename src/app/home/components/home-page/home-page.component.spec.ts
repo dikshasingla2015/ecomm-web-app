@@ -12,6 +12,8 @@ import { ProductModel } from 'src/app/core/models/product.model';
 import { ProductService } from 'src/app/core/services/product.service';
 import { ProductCardComponent } from '../product-card/product-card.component';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 import { HomePageComponent } from './home-page.component';
 
 describe('HomePageComponent', () => {
@@ -51,7 +53,8 @@ describe('HomePageComponent', () => {
             deps: [HttpClient],
           },
         }),
-        HttpClientModule
+        HttpClientModule,
+        NgxPaginationModule
       ]
     })
       .compileComponents();
