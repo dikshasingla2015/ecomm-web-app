@@ -1,5 +1,5 @@
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown"
+    <a class="nav-link dropdown-toggle header" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown"
         aria-expanded="false" aria-haspopup="true">
         {{ 'HEADER.CATEGORY_TEXT' | translate }}
     </a>
@@ -12,7 +12,7 @@
                         <a class="dropdown-item">{{child.name}}</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item" *ngFor="let child1 of child.children">
-                                <div (click)="onCategorySelected(child.name)">{{child1.name}}</div>
+                                <div (click)="onCategorySelected(child1.name)">{{child1.name}}</div>
                             </li>
                         </ul>
                     </li>

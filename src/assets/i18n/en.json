@@ -53,7 +53,7 @@
     "MIDDLENAME": "Middle Name",
     "LASTNAME": "Last Name",
     "LASTNAME_REQUIRED": "Please Enter your last name",
-    "LASTNAME_MINLENGTH": "must be of atleast length 4",
+    "LASTNAME_MINLENGTH": "must be of atleast length 3",
     "LASTNAME_PATTERN": "only alphabets allowed",
     "EMAIL": "Email",
     "EMAIL_REQUIRED": "Please Enter email-id",

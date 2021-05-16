@@ -1,7 +1,8 @@
 <p-card header={{productData.name}} subheader="{{productData.price | currency :'USD'}}" [style]="{width: '360px'}"
     class="card" styleClass="p-card-shadow" (click)="viewProductDescription(productData.id)">
     <ng-template pTemplate="header">
-        <img alt="Card" src={{productData.imageURL}} height="460px" width="290px" (click)="viewProductDescription(productData.id)">
+        <img alt="Card" src={{productData.imageURL}} height="460px" width="290px"
+            (click)="viewProductDescription(productData.id)">
     </ng-template>
     <p>{{productData.description}}</p>
 </p-card>

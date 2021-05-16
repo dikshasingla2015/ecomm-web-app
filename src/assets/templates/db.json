@@ -60,59 +60,175 @@
     },
     {
         "id": "4",
-        "name": "Redmi 9",
-        "brand": "Redmi",
-        "color": "Sky Blue",
-        "price": 8499,
-        "description": "Sky Blue, 4GB RAM, 64GB Storage",
-        "imageURL": "assets/images/redmi9.jpeg",
+        "name": "Skybags Stream",
+        "brand": "Skybag",
+        "color": "Blue Spacious",
+        "price": 1790,
+        "description": "Polyester 1811 cm Backpack with Rain Cover",
+        "imageURL": "assets/images/Skybag.jpg",
         "features": [
-            "13+2MP Rear camera with AI Portrait, AI scene recognition, HDR, Pro mode | 5MP front facing camera",
-            "16.58 centimeters (6.53-inch) HD+ multi-touch capacitive touchscreen with 1600 x 720 pixels resolution, 268 ppi pixel density, 20:9 aspect ratio",
-            "Memory, Storage & SIM: 4GB RAM | 64GB storage expandable up to 512GB| Dual SIM with dual standby (4G+4G)"
+            "3 spacious compartments with 1 front zip pocket (NO LAPTOP COMPARTMENT)",
+            "Raincover for Backpack at the bottom",
+            "Warranty type: Manufacturer; 12 months international",
+            "Padded top handle with side bottle holder",
+            "18.5 inch height with dimensions: 35 cms x 22 cms x 46 cms (LxWxH)"
         ],
-        "category": "Mobile",
+        "category": "Backpacks",
         "quantity": 5,
-        "ratings": 3
+        "ratings": 4
     },
     {
         "id": "5",
-        "name": "Samsung Galaxy M31",
-        "brand": "Samsung",
-        "color": "Ocean Blue",
-        "price": 13999,
-        "description": "Ocean Blue, 6GB RAM, 128GB Storage",
-        "imageURL": "assets/images/Samsung1.jpg",
+        "name": "Swiss Gear 1758 Backpack",
+        "brand": "Swiss Gear",
+        "color": "Grey With Blac",
+        "price": 2499,
+        "description": "46.36 x 13.97 x 31.75 cm; 657.71 Grams",
+        "imageURL": "assets/images/swiss-gear.jpg",
         "features": [
-            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
-            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
-            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
+            "Ergonomically contoured, padded shoulder straps with breathable mesh fabric and handy mobile phone pocket",
+            "Padded, Airflow back panel with mesh fabric for superior back ventilation and support. Internal file pocket",
+            "Side water bottle pockets. Media pocket with built-in headphone cord port",
+            "Quick-access, front zippered compartment with internal zip pocket and removable key fob."
         ],
-        "category": "Mobile",
+        "category": "Backpacks",
         "quantity": 5,
-        "ratings": 4.5
+        "ratings": 3.9
     },
     {
         "id": "6",
-        "name": "Redmi Note 10 Pro",
-        "brand": "Redmi",
-        "color": "Dark Night",
-        "price": 16999,
-        "description": "Dark Night, 6GB RAM, 128GB Storage",
-        "imageURL": "assets/images/redmiNote1.jpeg",
+        "name": "Wildcraft 35 ltrs",
+        "brand": "wildcraft",
+        "color": "Green",
+        "price": 1050,
+        "description": "22.9 x 31.8 x 47 cm; 400 Grams",
+        "imageURL": "assets/images/wildcraft.jpg",
         "features": [
-            "Qualcomm Snapdragon 732G with Kryo 470 Octa-core; 8nm process; Up to 2.3GHz clock speed",
-            "64 MP Quad Rear camera with 8MP Ultra-wide, 5MP Telemacro and Portrait lens| 16 MP Front camera",
-            "120Hz high refresh rate FHD+ (1080x2400) AMOLED Dot display; 16.9 centimeters (6.67 inch); 20:9 aspect ratio; HDR 10 support",
-            "5020 mAH large battery with 33W fast charger in-box and Type-C connectivity",
-            "6GB RAM | 128GB UFS 2.2 storage expandable up to 512GB with dedicated SD card slot | Dual SIM (nano+nano) dual standby (4G+4G)"
+            "Outer Material: Polyester, Color: Green",
+            "Capacity: 35 liters; Dimensions: 9 inches x 12.5 inches x 18.5 inches (LxWxH)",
+            "Number of compartments: 2",
+            "Warranty type: Manufacturer; 5 years manufacturer warranty is non-transferable and valid for 5 years from the original date of purchase"
         ],
-        "category": "Mobile",
+        "category": "Backpacks",
         "quantity": 5,
         "ratings": 4.1
     },
     {
         "id": "7",
+        "name": "Wildcraft Alpinist 55 Ltrs",
+        "brand": "wildcraft",
+        "color": "Orange",
+        "price": 4500,
+        "description": "22.9 x 33 x 76.2 cm; 2.06 Kilograms",
+        "imageURL": "assets/images/wildcraft_rucksack.jpg",
+        "features": [
+            "Outer Material Type: 420D Nylon Dobby, 210D Nylon Double Ripstop; Color: Orange",
+            "Capacity: 55 liters; Weight: 2220 grams; Dimensions: 9 in*13 in*30 in",
+            "Number of compartments: 3",
+            "Comes with hip belt and back padding",
+            "Warranty type: Manufacturer; 5 Years Warranty"
+        ],
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "8",
+        "name": "Fastrack 40 Ltrs",
+        "brand": "Fastrack",
+        "color": "Grey Rucksack",
+        "price": 2300,
+        "description": "26.7 x 27.9 x 53.3 cm; 1 Kilograms",
+        "imageURL": "assets/images/fasttrack.jpg",
+        "features": [
+            "Outer Material: Polyester, Color: Grey",
+            "Capacity: 40 liters; Dimensions: 10.5 inches x 11 inches x 21 inches (LxWxH)",
+            "Number of compartments: 1",
+            "26.7 x 27.9 x 53.3 Centimeters",
+            "Warranty type: Manufacturer; 1 year manufacturer warranty is non-transferable and valid for 1 year from the original date of purchase"
+        ],
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "9",
+        "name": "Indian Riders 50L",
+        "brand": "Indian Riders",
+        "color": "Olive Green in Forest Print",
+        "price": 1050,
+        "description": "Water-Repellent exterior coating",
+        "imageURL": "assets/images/indianRiders.jpg",
+        "features": [
+            "Outer material:- 1000 denier PU, inner material:- polyester, 1 compartment, 1 Bottle pocket, dimension (lxwxh):- 14x8x22 inches",
+            "Adjustable side and shoulders strap, good design, fashionable, light weight, cozy look, sliders and zippers, waterproof",
+            "good material, provides extra strength and long-lasting performance with the lightest weight possible. The extra strength provided by the double-layer bottom piece makes it very convenient to carry more load on your journeys"
+        ],
+        "category": "Ruksacks",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "10",
+        "name": "Skybags Trooper 75 Cms",
+        "brand": "Skybags",
+        "color": "Blue & White",
+        "price": 4800,
+        "description": "Polycarbonate Hardsided Check-in Luggage",
+        "imageURL": "assets/images/skybagtrolley.jpg",
+        "features": [
+            "75 x 30 x 55 cm; 3.98 Kilograms",
+            "Outer Material: Polycarbonate, Casing: Hard, Color: Blue & White",
+            "Capacity: 97 liters; Weight: 3980 grams; Dimensions: 75 cms x 30 cms x 55 cms (LxWxH)",
+            "Warranty type: Manufacturer; 1 year International warranty",
+            "Retractable top and side handles"
+        ],
+        "category": "Trolley",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "11",
+        "name": "Safari Tiffany Polycarbonate",
+        "brand": "Safari",
+        "color": "Printed",
+        "price": 4500,
+        "description": "77 cms Printed Hardsided",
+        "imageURL": "assets/images/safari.jpg",
+        "features": [
+            "30 x 54 x 77 cm; 4.9 Kilograms",
+            "Outer Material: Polycarbonate, Casing: Hard, Color: Printed",
+            "Capacity: 97 liters; Weight: 4900 grams; Dimensions: 30 cms x 54 cms x 77 cms (LxWxH)",
+            "Lock Type: Number Lock, Number of Wheels: 4",
+            "Warranty type: Manufacturer; 5 years international Manufacturer warranty"
+        ],
+        "category": "Trolley",
+        "quantity": 5,
+        "ratings": 3.4
+    },
+    {
+        "id": "12",
+        "name": "Tommy Hilfiger ABS 75 cms",
+        "brand": "Tommy Hilfiger",
+        "color": "White",
+        "price": 8400,
+        "description": "Hardsided Check-in Luggage",
+        "imageURL": "assets/images/tommy.jpg",
+        "features": [
+            "52 x 32 x 75 cm; 5.5 Kilograms",
+            "Outer Material: ABS, Casing: Hard, Color: White",
+            "Water resistant",
+            "Capacity: 125 liters; Dimensions: 52 cms x 32 cms x 75 cms (LxWxH)",
+            "Lock Type: TSA Lock, Number of Wheels: 4",
+            "Laptop Compatibility: No",
+            "Warranty type: Manufacturer; 3 year"
+        ],
+        "category": "Trolley",
+        "quantity": 5,
+        "ratings": 4.1
+    },
+    {
+        "id": "13",
         "name": "Mi Smart Band 5",
         "brand": "Redmi",
         "color": "Black",
@@ -132,7 +248,7 @@
         "ratings": 4.4
     },
     {
-        "id": "8",
+        "id": "14",
         "name": "Honor Band 5",
         "brand": "Honor",
         "color": "Meteorite Black",
@@ -150,7 +266,7 @@
         "ratings": 3.8
     },
     {
-        "id": "9",
+        "id": "15",
         "name": "Oneplus Smart Band",
         "brand": "Oneplus",
         "color": "Meteorite Black",
@@ -168,171 +284,55 @@
         "ratings": 4.1
     },
     {
-        "id": "10",
-        "name": "Skybags Stream",
-        "brand": "Skybag",
-        "color": "Blue Spacious",
-        "price": 1790,
-        "description": "Polyester 1811 cm Backpack with Rain Cover",
-        "imageURL": "assets/images/Skybag.jpg",
-        "features": [
-            "3 spacious compartments with 1 front zip pocket (NO LAPTOP COMPARTMENT)",
-            "Raincover for Backpack at the bottom",
-            "Warranty type: Manufacturer; 12 months international",
-            "Padded top handle with side bottle holder",
-            "18.5 inch height with dimensions: 35 cms x 22 cms x 46 cms (LxWxH)"
-        ],
-        "category": "Backpacks",
-        "quantity": 5,
-        "ratings": 4
-    },
-    {
-        "id": "11",
-        "name": "Swiss Gear 1758 Backpack",
-        "brand": "Swiss Gear",
-        "color": "Grey With Blac",
-        "price": 2499,
-        "description": "46.36 x 13.97 x 31.75 cm; 657.71 Grams",
-        "imageURL": "assets/images/swiss-gear.jpg",
-        "features": [
-            "Ergonomically contoured, padded shoulder straps with breathable mesh fabric and handy mobile phone pocket",
-            "Padded, Airflow back panel with mesh fabric for superior back ventilation and support. Internal file pocket",
-            "Side water bottle pockets. Media pocket with built-in headphone cord port",
-            "Quick-access, front zippered compartment with internal zip pocket and removable key fob."
-        ],
-        "category": "Backpacks",
-        "quantity": 5,
-        "ratings": 3.9
-    },
-    {
-        "id": "12",
-        "name": "wildcraft 35 ltrs",
-        "brand": "wildcraft",
-        "color": "Green",
-        "price": 1050,
-        "description": "22.9 x 31.8 x 47 cm; 400 Grams",
-        "imageURL": "assets/images/wildcraft.jpg",
-        "features": [
-            "Outer Material: Polyester, Color: Green",
-            "Capacity: 35 liters; Dimensions: 9 inches x 12.5 inches x 18.5 inches (LxWxH)",
-            "Number of compartments: 2",
-            "Warranty type: Manufacturer; 5 years manufacturer warranty is non-transferable and valid for 5 years from the original date of purchase"
-        ],
-        "category": "Backpacks",
-        "quantity": 5,
-        "ratings": 4.1
-    },
-    {
-        "id": "13",
-        "name": "Wildcraft Alpinist 55 Ltrs",
-        "brand": "wildcraft",
-        "color": "Orange",
-        "price": 4500,
-        "description": "22.9 x 33 x 76.2 cm; 2.06 Kilograms",
-        "imageURL": "assets/images/wildcraft_rucksack.jpg",
-        "features": [
-            "Outer Material Type: 420D Nylon Dobby, 210D Nylon Double Ripstop; Color: Orange",
-            "Capacity: 55 liters; Weight: 2220 grams; Dimensions: 9 in*13 in*30 in",
-            "Number of compartments: 3",
-            "Comes with hip belt and back padding",
-            "Warranty type: Manufacturer; 5 Years Warranty"
-        ],
-        "category": "Ruksacks",
-        "quantity": 5,
-        "ratings": 4.1
-    },
-    {
-        "id": "14",
-        "name": "Fastrack 40 Ltrs",
-        "brand": "Fastrack",
-        "color": "Grey Rucksack",
-        "price": 2300,
-        "description": "26.7 x 27.9 x 53.3 cm; 1 Kilograms",
-        "imageURL": "assets/images/fasttrack.jpg",
-        "features": [
-            "Outer Material: Polyester, Color: Grey",
-            "Capacity: 40 liters; Dimensions: 10.5 inches x 11 inches x 21 inches (LxWxH)",
-            "Number of compartments: 1",
-            "26.7 x 27.9 x 53.3 Centimeters",
-            "Warranty type: Manufacturer; 1 year manufacturer warranty is non-transferable and valid for 1 year from the original date of purchase"
-        ],
-        "category": "Ruksacks",
-        "quantity": 5,
-        "ratings": 4.1
-    },
-    {
-        "id": "15",
-        "name": "Indian Riders 50L",
-        "brand": "Indian Riders",
-        "color": "Olive Green in Forest Print",
-        "price": 1050,
-        "description": "Water-Repellent exterior coating",
-        "imageURL": "assets/images/indianRiders.jpg",
-        "features": [
-            "Outer material:- 1000 denier PU, inner material:- polyester, 1 compartment, 1 Bottle pocket, dimension (lxwxh):- 14x8x22 inches",
-            "Adjustable side and shoulders strap, good design, fashionable, light weight, cozy look, sliders and zippers, waterproof",
-            "good material, provides extra strength and long-lasting performance with the lightest weight possible. The extra strength provided by the double-layer bottom piece makes it very convenient to carry more load on your journeys"
-        ],
-        "category": "Ruksacks",
-        "quantity": 5,
-        "ratings": 4.1
-    },
-    {
         "id": "16",
-        "name": "Skybags Trooper 75 Cms",
-        "brand": "Skybags",
-        "color": "Blue & White",
-        "price": 4800,
-        "description": "Polycarbonate Hardsided Check-in Luggage",
-        "imageURL": "assets/images/skybagtrolley.jpg",
+        "name": "Redmi 9",
+        "brand": "Redmi",
+        "color": "Sky Blue",
+        "price": 8499,
+        "description": "Sky Blue, 4GB RAM, 64GB Storage",
+        "imageURL": "assets/images/redmi9.jpeg",
         "features": [
-            "75 x 30 x 55 cm; 3.98 Kilograms",
-            "Outer Material: Polycarbonate, Casing: Hard, Color: Blue & White",
-            "Capacity: 97 liters; Weight: 3980 grams; Dimensions: 75 cms x 30 cms x 55 cms (LxWxH)",
-            "Warranty type: Manufacturer; 1 year International warranty",
-            "Retractable top and side handles"
+            "13+2MP Rear camera with AI Portrait, AI scene recognition, HDR, Pro mode | 5MP front facing camera",
+            "16.58 centimeters (6.53-inch) HD+ multi-touch capacitive touchscreen with 1600 x 720 pixels resolution, 268 ppi pixel density, 20:9 aspect ratio",
+            "Memory, Storage & SIM: 4GB RAM | 64GB storage expandable up to 512GB| Dual SIM with dual standby (4G+4G)"
         ],
-        "category": "Trolley",
+        "category": "Mobile",
         "quantity": 5,
-        "ratings": 4.1
+        "ratings": 3
     },
     {
         "id": "17",
-        "name": "Safari Tiffany Polycarbonate",
-        "brand": "Safari",
-        "color": "Printed",
-        "price": 4500,
-        "description": "77 cms Printed Hardsided",
-        "imageURL": "assets/images/safari.jpg",
+        "name": "Samsung Galaxy M31",
+        "brand": "Samsung",
+        "color": "Ocean Blue",
+        "price": 13999,
+        "description": "Ocean Blue, 6GB RAM, 128GB Storage",
+        "imageURL": "assets/images/Samsung1.jpg",
         "features": [
-            "30 x 54 x 77 cm; 4.9 Kilograms",
-            "Outer Material: Polycarbonate, Casing: Hard, Color: Printed",
-            "Capacity: 97 liters; Weight: 4900 grams; Dimensions: 30 cms x 54 cms x 77 cms (LxWxH)",
-            "Lock Type: Number Lock, Number of Wheels: 4",
-            "Warranty type: Manufacturer; 5 years international Manufacturer warranty"
+            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
+            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
+            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
         ],
-        "category": "Trolley",
+        "category": "Mobile",
         "quantity": 5,
-        "ratings": 3.4
+        "ratings": 4.5
     },
     {
         "id": "18",
-        "name": "Tommy Hilfiger ABS 75 cms",
-        "brand": "Tommy Hilfiger",
-        "color": "White",
-        "price": 8400,
-        "description": "Hardsided Check-in Luggage",
-        "imageURL": "assets/images/tommy.jpg",
+        "name": "Redmi Note 10 Pro",
+        "brand": "Redmi",
+        "color": "Dark Night",
+        "price": 16999,
+        "description": "Dark Night, 6GB RAM, 128GB Storage",
+        "imageURL": "assets/images/redmiNote1.jpeg",
         "features": [
-            "52 x 32 x 75 cm; 5.5 Kilograms",
-            "Outer Material: ABS, Casing: Hard, Color: White",
-            "Water resistant",
-            "Capacity: 125 liters; Dimensions: 52 cms x 32 cms x 75 cms (LxWxH)",
-            "Lock Type: TSA Lock, Number of Wheels: 4",
-            "Laptop Compatibility: No",
-            "Warranty type: Manufacturer; 3 year"
+            "Qualcomm Snapdragon 732G with Kryo 470 Octa-core; 8nm process; Up to 2.3GHz clock speed",
+            "64 MP Quad Rear camera with 8MP Ultra-wide, 5MP Telemacro and Portrait lens| 16 MP Front camera",
+            "120Hz high refresh rate FHD+ (1080x2400) AMOLED Dot display; 16.9 centimeters (6.67 inch); 20:9 aspect ratio; HDR 10 support",
+            "5020 mAH large battery with 33W fast charger in-box and Type-C connectivity",
+            "6GB RAM | 128GB UFS 2.2 storage expandable up to 512GB with dedicated SD card slot | Dual SIM (nano+nano) dual standby (4G+4G)"
         ],
-        "category": "Trolley",
+        "category": "Mobile",
         "quantity": 5,
         "ratings": 4.1
     }

@@ -10,6 +10,8 @@ import { HttpLoaderFactory } from 'src/app/app.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 describe('ProductCardComponent', () => {
   let component: ProductCardComponent;
   let fixture: ComponentFixture<ProductCardComponent>;
@@ -20,6 +22,7 @@ describe('ProductCardComponent', () => {
       declarations: [ProductCardComponent],
       imports: [
         RouterTestingModule,
+        NgxPaginationModule,
         CardModule,
         ButtonModule,
         TranslateModule.forRoot({

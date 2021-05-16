@@ -53,7 +53,7 @@
         "MIDDLENAME": "Zweiter Vorname",
         "LASTNAME": "Nachname",
         "LASTNAME_REQUIRED": "Bitte geben Sie ihren Nachnamen ein",
-        "LASTNAME_MINLENGTH": "muss mindestens 4 lang sein",
+        "LASTNAME_MINLENGTH": "muss mindestens 3 lang sein",
         "LASTNAME_PATTERN": "nur Alphabete erlaubt",
         "EMAIL": "Email",
         "EMAIL_REQUIRED": "Bitte geben Sie die E-Mail-ID ein",

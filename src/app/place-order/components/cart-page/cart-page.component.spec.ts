@@ -176,7 +176,7 @@ describe('CartPageComponent', () => {
     expect(router.navigateByUrl).toHaveBeenCalledWith('/placeorder/checkout');
   }));
 
-  it('should not do anything decrement is called with product quantity 1', () => {
+  it('should not do anything when decrement is called with product quantity 1', () => {
     component.cartData = dummyData;
     mockCartService = fixture.debugElement.injector.get(CartService);
     component.decreaseQuantity(0);
