@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 import { LoginDetails } from 'src/app/core/models/logindetails.model';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { NavigationService } from 'src/app/core/services/navigation/navigation.service';
@@ -26,7 +26,8 @@ export class LoginPageComponent implements OnInit {
     private readonly authService: AuthService,
     private readonly router: Router,
     private readonly userService: UserService,
-    private readonly navigationService: NavigationService) { }
+    private readonly navigationService: NavigationService,
+    private readonly translateService: TranslateService) { }
 
   ngOnInit(): void {
     this.userNameControl = new FormControl('', [Validators.required, Validators.email]);
@@ -55,7 +56,7 @@ export class LoginPageComponent implements OnInit {
             console.log(error);
           });
       } else {
-        this.message = 'Invalid Login Credentials';
+        this.message = this.translateService.instant('LOGIN.INVALID_CREDS');
         this.loginForm.reset();
       }
     }, (error) => {

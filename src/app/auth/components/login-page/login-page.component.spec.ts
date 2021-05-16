@@ -3,7 +3,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
@@ -28,7 +28,8 @@ describe('LoginPageComponent', () => {
       providers: [
         AuthService,
         NavigationService,
-        UserService
+        UserService,
+        TranslateService
       ],
       imports: [
         ReactiveFormsModule,

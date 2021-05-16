@@ -19,7 +19,8 @@
         "USERNAME_EMAIL": "Der Benutzername muss vom E-Mail-Typ sein",
         "PASSWORD_REQUIRED": "Bitte Passwort eingeben",
         "LOGIN_TEXT": "ANMELDUNG",
-        "SIGNIN": "Einloggen"
+        "SIGNIN": "Einloggen",
+        "INVALID_CREDS":"Ungültige Login-Details"
     },
     "HOME": {
         "CANCEL": "Stornieren",

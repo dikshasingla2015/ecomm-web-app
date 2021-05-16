@@ -19,7 +19,8 @@
     "USERNAME_EMAIL": "username must be of email type",
     "PASSWORD_REQUIRED": "Please enter password",
     "LOGIN_TEXT": "LOGIN",
-    "SIGNIN": "Sign In"
+    "SIGNIN": "Sign In",
+    "INVALID_CREDS":"Invalid Login Credentials"
   },
   "HOME": {
     "CANCEL": "Cancel",
